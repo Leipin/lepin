@@ -1,0 +1,12 @@
+/*公共样式**/
+.ui-autocomplete{width:488px;background:#fafafa !important;position: relative;z-index:10;border: 2px solid #00b38a;}
+.ui-autocomplete-category{font-size:16px;color:#999;width:50px;position: absolute;z-index:11; right: 0px;/*top: 6px; */text-align:center;border-top: 1px dashed #e5e5e5;padding:5px 0;}
+.ui-menu-item{ *width:439px;vertical-align: middle;position: relative;margin: 0px;margin-right: 50px !important;background:#fff;border-right: 1px dashed #ededed;}
+.ui-menu-item a{display:block;overflow:hidden;}
+
+
+
+
+
+
+
