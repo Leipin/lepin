@@ -57,11 +57,11 @@
 	float:left;
 	height:17px;
 	width:17px;
-	background: url(../images/user/radio.png) no-repeat;
+	background: url(../images/radio.png) no-repeat;
 	margin:4px 10px 0 0;
 }
 #bindReplace .chooseAccount label.current em{
-	background: url(../images/user/radioSel.png) no-repeat;
+	background: url(../images/radioSel.png) no-repeat;
 }
 #bindReplace .chooseAccount .acc_detail{
 	color:#777;

@@ -1,0 +1,3957 @@
+<block name="body"><extend name="Base/common"/>
+<script type="text/javascript">
+var ctx = "http://www.lagou.com";
+var rctx = "http://hr.lagou.com";
+var pctx = "http://passport.lagou.com";
+var frontLogin = "http://www.lagou.com/frontLogin.do";
+var frontLogout = "http://www.lagou.com/frontLogout.do";
+var frontRegister = "http://www.lagou.com/frontRegister.do";
+</script>
+<script type="text/javascript">
+	function passportInit(){
+		noticeInit();	        
+	}
+</script>
+<body>
+<script>
+    var cd = {
+            $: function(id){
+                return document.getElementById(id);    
+            },
+            futureDate: -6638601937,
+            obj: function(){
+                return {
+                    sec: cd.$("activity_minute"),
+                    mini: cd.$("activity_hour"),
+                    hour: cd.$("activity_day")
+                }
+            }
+        };
+        fnTimeCountDown(cd.futureDate, cd.obj());
+</script>
+<div id="body">
+<div id="container">
+<div class="clearfixs mr_created">
+<div class="mr_myresume_l">
+	<div class="switch_resume">
+		<span>允许企业主动对我发起职位邀请。</span>
+		<div class="openresume">
+			<div class="toggle toggle-off">
+				<label class="toggle-radio" for="toggleOption2"> <i class="checked"></i>
+				</label>
+				<input name="toggleOptions" id="toggleOption2" value="option2" checked="checked" type="radio">
+				<label class="toggle-radio" for="toggleOption1">
+					<i class="uncheck"></i>
+				</label>
+				<input name="toggleOptions" id="toggleOption1" value="option1" type="radio"></div>
+		</div>
+		<div style="display: none;" class="openresume_tip unopen">
+			<span class="triangle_border tb_border"></span>
+			<span class="triangle_border tb_background"></span>
+			<i></i>
+			<p>你的在线简历还不够完善，暂不能开启PLUS。</p>
+		</div>
+
+		<div style="display: none;" class="openresume_tip succ-fail">
+			<span class="triangle_border tb_border"></span>
+			<span class="triangle_border tb_background"></span>
+			<p>已开启PLUS</p>
+		</div>
+
+		<div style="display: block;" class="openresume_tip firstset">
+			<a href="http://www.lagou.com/user/resumePrivacy.html">去设置</a>
+			<span class="triangle_border tb_border"></span>
+			<span class="triangle_border tb_background"></span>
+			<i></i>
+
+			<p>匿名展示自己的履历，让职位发布者通过拉勾PLUS向你推荐职位。</p>
+		</div>
+	</div>
+	<div id="mr_mr_head">
+		<div class="mr_top_bg" id="baseinfo">
+			<img id="userpic" src="__PUBLIC__/Home/images/default_headpic.png" alt="默认头像" class="mr_headimg" height="117" width="117">
+			<img src="__PUBLIC__/Home/images/tou.png" class="opa" alt="">
+			<img style="display: none;" src="__PUBLIC__/Home/images/shadow_tx.png" alt="" class="shadow">
+			<input class="mr_headfile" id="up_txpic" name="headPic" onchange="myresumeCommon.utils.imageUpload(this,myresumeCommon.requestTargets.photoUpload,uploadPhoto.upSucc,uploadPhoto.upFail);" title="支持jpg、jpeg、gif、png格式，文件小于10M" type="file"></div>
+		<div class="mr_baseinfo">
+			<i class="mr_left_bg"></i>
+			<i class="mr_right_bg"></i>
+			<div class="mr_my_qr">
+				<div class="dropdown_menu">
+					<img src="__PUBLIC__/Home/images/qrcode.jpg" height="131" width="131"></div>
+			</div>
+			<div class="mr_p_name mr_w604 clearfixs">
+				<span class="mr_edit dn">
+					<i></i> <em>编辑</em>
+				</span>
+				<span class="mr_name">余双祥</span>
+			</div>
+			<form id="nameForm">
+				<div class="mr_name_edit dn">
+					<input id="mr_name" name="mr_name" class="ed_name" autocomplete="off" type="text">
+					<input class="save" value="保存" type="submit">
+					<a href="javascript:;" class="cancel">取消</a>
+				</div>
+			</form>
+			<div class="mr_p_introduce mr_w604 clearfixs">
+				<span class="mr_edit dn" data-type="0">
+					<i></i> <em>编辑</em>
+				</span>
+				<span class="mr_intro mr_intro_normal" title="一年p2p借贷平台经验">一年p2p借贷平台经验</span>
+			</div>
+			<form id="introduceForm" action="javascript:;">
+				<div class="mr_intro_edit dn">
+					<input id="mr_intro" name="mr_intro" placeholder="一句话介绍自己，告诉我为什么选择你而不是别人" class="ed_name" autocomplete="off" type="text">
+					<a class="save">保存</a>
+					<a href="javascript:;" class="cancel">取消</a>
+					<span class="mroneError dn"></span>
+				</div>
+			</form>
+			<div class="mr_p_info mr_infoed mr_w604 clearfixs">
+				<div class="info_t">
+					<span class="shenfen">
+						<i></i>
+						<em data-id="0" title="软件开发工程师 · 广东省工合股权基金有限公司">软件开发工程师 · 广东省工合股权基金有限公司</em>
+					</span>
+					<span class="base_info">
+						<i></i>
+						<em class="s"></em>
+						<em class="x">本科</em>
+						<em class="j"><span class="job_span">3年工作经验</span>
+							<span class="birth_span dn">
+								年出生
+								<em></em>
+							</span></em> 
+						<em class="mr0 d">深圳</em>
+					</span>
+				</div>
+				<div class="info_b">
+					<span class="mobile">
+						<i></i>
+						<em title="15323850269">15323850269</em>
+					</span>
+					<span class="email">
+						<i></i>
+						<em title="yu_shuangxiang@sina.com">yu_shuangxiang@sina.com</em>
+					</span>
+				</div>
+				<div class="mr_sns dn"></div>
+				<span class="mr_edit mr_head_r mr_edit_on dn" data-birthday="" data-sf="软件开发工程师" data-shenfen="软件开发工程师 · 广东省工合股权基金有限公司" data-sex="" data-xl="本科" data-gzjy="3年" data-city="深圳" data-mobile="15323850269" data-email="yu_shuangxiang@sina.com">
+					<i></i>
+					<em>编辑</em>
+				</span>
+			</div>
+			<form id="olinfoForm">
+				<div class="mr_info_edit mr_info_on dn">
+					<div class="mr_showidentity_div">
+						<label>显示身份</label>
+						<div class="form_wrap normal_s" style="*z-index:6;">
+							<input id="shenfen" name="shenfen" title="" class="mr_button" value="" type="button">
+							<i class="mr_sj"></i>
+							<div style="display: none;" class="xl_list dn">
+								<ul class="ul_shenfen">
+									<li data-id="1" title="机电一体化工程 · 湖北理工学院">机电一体化工程 · 湖北理工学院</li>
+									<li data-id="2" title="软件开发工程师 · 广东省工合股权基金有限公司">软件开发工程师 · 广东省工合股权基金有限公司</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<label>出生年份</label>
+					<div class="clearfixs mr_year_se">
+						<div class="mr_years fl">
+							<div class="form_wrap form_wrap_y normal_s" style="*z-index:5;">
+								<input id="mr_year" name="mr_year" class="mr_button" value="" type="button">
+								<i class="mr_sj"></i>
+								<div style="display: none;" class="xl_list dn">
+									<ul class="ul_year">
+										<li>1999</li>
+										<li>1998</li>
+										<li>1997</li>
+										<li>1996</li>
+										<li>1995</li>
+										<li>1994</li>
+										<li>1993</li>
+										<li>1992</li>
+										<li>1991</li>
+										<li>1990</li>
+										<li>1989</li>
+										<li>1988</li>
+										<li>1987</li>
+										<li>1986</li>
+										<li>1985</li>
+										<li>1984</li>
+										<li>1983</li>
+										<li>1982</li>
+										<li>1981</li>
+										<li>1980</li>
+										<li>1979</li>
+										<li>1978</li>
+										<li>1977</li>
+										<li>1976</li>
+										<li>1975</li>
+										<li>1974</li>
+										<li>1973</li>
+										<li>1972</li>
+										<li>1971</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<span class="mr_man fl">
+							<i></i>
+							<em>男</em>
+						</span>
+						<span class="mr_women fl">
+							<i></i>
+							<em>女</em>
+						</span>
+					</div>
+					<label>最高学历</label>
+					<div class="form_wrap normal_s" style="*z-index:4;">
+						<input id="xl" name="xl" class="mr_button" value="" type="button">
+						<i class="mr_sj"></i>
+						<div style="display: none;" class="xl_list dn">
+							<ul class="ul_xl">
+								<li>大专</li>
+								<li>本科</li>
+								<li>硕士</li>
+								<li>博士</li>
+								<li>其他</li>
+							</ul>
+						</div>
+					</div>
+					<label>工作年限</label>
+					<div class="form_wrap normal_s" style="*z-index:3;">
+						<input id="gznx" name="gznx" class="mr_button" value="" type="button">
+						<i class="mr_sj"></i>
+						<div style="display: none;" class="xl_list dn">
+							<ul class="ul_gznx">
+								<li>应届毕业生</li>
+								<li>1年</li>
+								<li>2年</li>
+								<li>3年</li>
+								<li>4年</li>
+								<li>5年</li>
+								<li>6年</li>
+								<li>7年</li>
+								<li>8年</li>
+								<li>9年</li>
+								<li>10年</li>
+								<li>10年以上</li>
+							</ul>
+						</div>
+					</div>
+					<label>所在城市</label>
+					<div class="form_wrap city_s" style="*z-index:2;">
+						<i class="mr_sj"></i>
+						<input id="szcs" name="szcs" class="mr_button" value="" type="button">
+						<div style="display: none;" class="xl_list dn">
+
+							<div class="mr_selCity">
+								<ul class="reset mr_province">
+									<li>
+										<span>热门城市</span>
+										<ul class="reset dn">
+											<li>北京</li>
+											<li>上海</li>
+											<li>广州</li>
+											<li>深圳</li>
+											<li>杭州</li>
+											<li>成都</li>
+											<li>西安</li>
+											<li>南京</li>
+											<li>厦门</li>
+											<li>武汉</li>
+										</ul>
+									</li>
+									<li>
+										<span>北京</span>
+										<ul class="reset dn">
+											<li class="mr_on">北京</li>
+										</ul>
+									</li>
+									<li>
+										<span>上海</span>
+										<ul class="reset dn">
+											<li class="mr_on">上海</li>
+										</ul>
+									</li>
+									<li>
+										<span>天津</span>
+										<ul class="reset dn">
+											<li class="mr_on">天津</li>
+										</ul>
+									</li>
+									<li>
+										<span>重庆</span>
+										<ul class="reset dn">
+											<li class="mr_on">重庆</li>
+										</ul>
+									</li>
+									<li>
+										<span>河北</span>
+										<ul class="reset dn">
+											<li class="mr_on">石家庄</li>
+											<li>唐山</li>
+											<li>秦皇岛</li>
+											<li>邯郸</li>
+											<li>邢台</li>
+											<li>保定</li>
+											<li>张家口</li>
+											<li>承德</li>
+											<li>沧州</li>
+											<li>廊坊</li>
+											<li>衡水</li>
+										</ul>
+									</li>
+									<li>
+										<span>山西</span>
+										<ul class="reset dn">
+											<li class="mr_on">太原</li>
+											<li>大同</li>
+											<li>阳泉</li>
+											<li>长治</li>
+											<li>晋城</li>
+											<li>朔州</li>
+											<li>晋中</li>
+											<li>运城</li>
+											<li>忻州</li>
+											<li>临汾</li>
+											<li>吕梁</li>
+											<li>永济市</li>
+										</ul>
+									</li>
+									<li>
+										<span>内蒙古</span>
+										<ul class="reset dn">
+											<li class="mr_on">呼和浩特</li>
+											<li>包头</li>
+											<li>乌海</li>
+											<li>赤峰</li>
+											<li>通辽</li>
+											<li>鄂尔多斯</li>
+											<li>呼伦贝尔</li>
+											<li>兴安盟</li>
+											<li>锡林郭勒盟</li>
+											<li>乌兰察布</li>
+											<li>巴彦淖尔</li>
+											<li>阿拉善盟</li>
+										</ul>
+									</li>
+									<li>
+										<span>辽宁</span>
+										<ul class="reset dn">
+											<li class="mr_on">沈阳</li>
+											<li>大连</li>
+											<li>鞍山</li>
+											<li>抚顺</li>
+											<li>本溪</li>
+											<li>丹东</li>
+											<li>锦州</li>
+											<li>营口</li>
+											<li>阜新</li>
+											<li>辽阳</li>
+											<li>盘锦</li>
+											<li>铁岭</li>
+											<li>朝阳</li>
+											<li>葫芦岛</li>
+										</ul>
+									</li>
+									<li>
+										<span>吉林</span>
+										<ul class="reset dn">
+											<li class="mr_on">长春</li>
+											<li>吉林</li>
+											<li>四平</li>
+											<li>辽源</li>
+											<li>通化</li>
+											<li>白山</li>
+											<li>松原</li>
+											<li>白城</li>
+											<li>延边朝鲜族自治州</li>
+										</ul>
+									</li>
+									<li>
+										<span>黑龙江</span>
+										<ul class="reset dn">
+											<li class="mr_on">哈尔滨</li>
+											<li>齐齐哈尔</li>
+											<li>鸡西</li>
+											<li>鹤岗</li>
+											<li>双鸭山</li>
+											<li>大庆</li>
+											<li>伊春</li>
+											<li>佳木斯</li>
+											<li>七台河</li>
+											<li>牡丹江</li>
+											<li>黑河</li>
+											<li>绥化</li>
+											<li>大兴安岭地区</li>
+										</ul>
+									</li>
+									<li>
+										<span>江苏</span>
+										<ul class="reset dn">
+											<li class="mr_on">南京</li>
+											<li>苏州</li>
+											<li>昆山</li>
+											<li>常熟</li>
+											<li>张家港</li>
+											<li>无锡</li>
+											<li>江阴</li>
+											<li>徐州</li>
+											<li>常州</li>
+											<li>南通</li>
+											<li>连云港</li>
+											<li>淮安</li>
+											<li>盐城</li>
+											<li>扬州</li>
+											<li>镇江</li>
+											<li>泰州</li>
+											<li>靖江</li>
+											<li>宿迁</li>
+											<li>太仓</li>
+										</ul>
+									</li>
+									<li>
+										<span>浙江</span>
+										<ul class="reset dn">
+											<li class="mr_on">杭州</li>
+											<li>宁波</li>
+											<li>温州</li>
+											<li>嘉兴</li>
+											<li>湖州</li>
+											<li>绍兴</li>
+											<li>金华</li>
+											<li>衢州</li>
+											<li>舟山</li>
+											<li>台州</li>
+											<li>丽水</li>
+											<li>玉环县</li>
+											<li>方家山</li>
+										</ul>
+									</li>
+									<li>
+										<span>安徽</span>
+										<ul class="reset dn">
+											<li class="mr_on">合肥</li>
+											<li>芜湖</li>
+											<li>蚌埠</li>
+											<li>淮南</li>
+											<li>马鞍山</li>
+											<li>淮北</li>
+											<li>铜陵</li>
+											<li>安庆</li>
+											<li>黄山</li>
+											<li>滁州</li>
+											<li>阜阳</li>
+											<li>宿州</li>
+											<li>巢湖</li>
+											<li>六安</li>
+											<li>亳州</li>
+											<li>池州</li>
+											<li>宣城</li>
+										</ul>
+									</li>
+									<li>
+										<span>福建</span>
+										<ul class="reset dn">
+											<li class="mr_on">福州</li>
+											<li>厦门</li>
+											<li>莆田</li>
+											<li>三明</li>
+											<li>泉州</li>
+											<li>泉港区</li>
+											<li>漳州</li>
+											<li>南平</li>
+											<li>龙岩</li>
+											<li>宁德</li>
+										</ul>
+									</li>
+									<li>
+										<span>江西</span>
+										<ul class="reset dn">
+											<li class="mr_on">南昌</li>
+											<li>景德镇</li>
+											<li>萍乡</li>
+											<li>九江</li>
+											<li>新余</li>
+											<li>鹰潭</li>
+											<li>赣州</li>
+											<li>吉安</li>
+											<li>宜春</li>
+											<li>抚州</li>
+											<li>上饶</li>
+										</ul>
+									</li>
+									<li>
+										<span>山东</span>
+										<ul class="reset dn">
+											<li class="mr_on">济南</li>
+											<li>青岛</li>
+											<li>淄博</li>
+											<li>枣庄</li>
+											<li>东营</li>
+											<li>烟台</li>
+											<li>潍坊</li>
+											<li>济宁</li>
+											<li>泰安</li>
+											<li>威海</li>
+											<li>日照</li>
+											<li>莱芜</li>
+											<li>临沂</li>
+											<li>德州</li>
+											<li>聊城</li>
+											<li>滨州</li>
+											<li>菏泽</li>
+											<li>章丘</li>
+											<li>荣成</li>
+										</ul>
+									</li>
+									<li>
+										<span>河南</span>
+										<ul class="reset dn">
+											<li class="mr_on">郑州</li>
+											<li>开封</li>
+											<li>洛阳</li>
+											<li>平顶山</li>
+											<li>安阳</li>
+											<li>鹤壁</li>
+											<li>新乡</li>
+											<li>焦作</li>
+											<li>濮阳</li>
+											<li>许昌</li>
+											<li>漯河</li>
+											<li>三门峡</li>
+											<li>南阳</li>
+											<li>商丘</li>
+											<li>信阳</li>
+											<li>周口</li>
+											<li>驻马店</li>
+										</ul>
+									</li>
+									<li>
+										<span>湖北</span>
+										<ul class="reset dn">
+											<li class="mr_on">武汉</li>
+											<li>黄石</li>
+											<li>十堰</li>
+											<li>宜昌</li>
+											<li>襄樊</li>
+											<li>鄂州</li>
+											<li>荆门</li>
+											<li>孝感</li>
+											<li>荆州</li>
+											<li>黄冈</li>
+											<li>咸宁</li>
+											<li>随州</li>
+											<li>恩施土家族苗族自治州</li>
+										</ul>
+									</li>
+									<li>
+										<span>湖南</span>
+										<ul class="reset dn">
+											<li class="mr_on">长沙</li>
+											<li>株洲</li>
+											<li>湘潭</li>
+											<li>衡阳</li>
+											<li>邵阳</li>
+											<li>岳阳</li>
+											<li>常德</li>
+											<li>张家界</li>
+											<li>益阳</li>
+											<li>郴州</li>
+											<li>永州</li>
+											<li>怀化</li>
+											<li>娄底</li>
+											<li>湘西土家族苗族自治州</li>
+										</ul>
+									</li>
+									<li>
+										<span>广东</span>
+										<ul class="reset dn">
+											<li class="mr_on">广州</li>
+											<li>深圳</li>
+											<li>韶关</li>
+											<li>珠海</li>
+											<li>汕头</li>
+											<li>佛山</li>
+											<li>南海区</li>
+											<li>江门</li>
+											<li>湛江</li>
+											<li>茂名</li>
+											<li>肇庆</li>
+											<li>惠州</li>
+											<li>梅州</li>
+											<li>汕尾</li>
+											<li>河源</li>
+											<li>阳江</li>
+											<li>清远</li>
+											<li>东莞</li>
+											<li>中山</li>
+											<li>潮州</li>
+											<li>揭阳</li>
+											<li>云浮</li>
+										</ul>
+									</li>
+									<li>
+										<span>广西</span>
+										<ul class="reset dn">
+											<li class="mr_on">南宁</li>
+											<li>柳州</li>
+											<li>桂林</li>
+											<li>梧州</li>
+											<li>北海</li>
+											<li>防城港</li>
+											<li>钦州</li>
+											<li>贵港</li>
+											<li>玉林</li>
+											<li>百色</li>
+											<li>贺州</li>
+											<li>河池</li>
+											<li>来宾</li>
+											<li>崇左</li>
+										</ul>
+									</li>
+									<li>
+										<span>海南</span>
+										<ul class="reset dn">
+											<li class="mr_on">海口</li>
+											<li>三亚</li>
+											<li>洋浦市</li>
+										</ul>
+									</li>
+									<li>
+										<span>四川</span>
+										<ul class="reset dn">
+											<li class="mr_on">成都</li>
+											<li>自贡</li>
+											<li>攀枝花</li>
+											<li>泸州</li>
+											<li>德阳</li>
+											<li>绵阳</li>
+											<li>广元</li>
+											<li>遂宁</li>
+											<li>内江</li>
+											<li>乐山</li>
+											<li>南充</li>
+											<li>眉山</li>
+											<li>宜宾</li>
+											<li>广安</li>
+											<li>达州</li>
+											<li>雅安</li>
+											<li>巴中</li>
+											<li>资阳</li>
+											<li>阿坝藏族羌族自治州</li>
+											<li>甘孜藏族自治州</li>
+											<li>凉山彝族自治州</li>
+										</ul>
+									</li>
+									<li>
+										<span>贵州</span>
+										<ul class="reset dn">
+											<li class="mr_on">贵阳</li>
+											<li>六盘水</li>
+											<li>遵义</li>
+											<li>安顺</li>
+											<li>铜仁地区</li>
+											<li>黔西南布依族苗族自治州</li>
+											<li>毕节地区</li>
+											<li>黔东南苗族侗族自治州</li>
+											<li>黔南布依族苗族自治州</li>
+										</ul>
+									</li>
+									<li>
+										<span>云南</span>
+										<ul class="reset dn">
+											<li class="mr_on">昆明</li>
+											<li>曲靖</li>
+											<li>玉溪</li>
+											<li>保山</li>
+											<li>昭通</li>
+											<li>楚雄彝族自治州</li>
+											<li>红河哈尼族彝族自治州</li>
+											<li>文山壮族苗族自治州</li>
+											<li>思茅</li>
+											<li>西双版纳傣族自治州</li>
+											<li>德宏傣族景颇族自治州</li>
+											<li>大理白族自治州</li>
+											<li>丽江</li>
+											<li>怒江傈僳族自治州</li>
+											<li>迪庆藏族自治州</li>
+											<li>临沧</li>
+										</ul>
+									</li>
+									<li>
+										<span>陕西</span>
+										<ul class="reset dn">
+											<li class="mr_on">西安</li>
+											<li>铜川</li>
+											<li>宝鸡</li>
+											<li>咸阳</li>
+											<li>渭南</li>
+											<li>延安</li>
+											<li>汉中</li>
+											<li>榆林</li>
+											<li>安康</li>
+											<li>商洛</li>
+										</ul>
+									</li>
+									<li>
+										<span>西藏</span>
+										<ul class="reset dn">
+											<li class="mr_on">拉萨</li>
+											<li>昌都</li>
+											<li>山南</li>
+											<li>日喀则</li>
+											<li>那曲</li>
+											<li>阿里</li>
+											<li>林芝</li>
+										</ul>
+									</li>
+									<li>
+										<span>甘肃</span>
+										<ul class="reset dn">
+											<li class="mr_on">兰州</li>
+											<li>嘉峪关</li>
+											<li>金昌</li>
+											<li>白银</li>
+											<li>天水</li>
+											<li>武威</li>
+											<li>张掖</li>
+											<li>平凉</li>
+											<li>酒泉</li>
+											<li>庆阳</li>
+											<li>定西</li>
+											<li>陇南</li>
+											<li>临夏回族自治州</li>
+											<li>甘南藏族自治州</li>
+										</ul>
+									</li>
+									<li>
+										<span>青海</span>
+										<ul class="reset dn">
+											<li class="mr_on">西宁</li>
+											<li>海晏</li>
+											<li>海东</li>
+											<li>海北</li>
+											<li>黄南</li>
+											<li>海南</li>
+											<li>果洛</li>
+											<li>玉树</li>
+											<li>海西</li>
+										</ul>
+									</li>
+									<li>
+										<span>宁夏</span>
+										<ul class="reset dn">
+											<li class="mr_on">银川</li>
+											<li>石嘴山</li>
+											<li>吴忠</li>
+											<li>固原</li>
+											<li>中卫</li>
+										</ul>
+									</li>
+									<li>
+										<span>新疆</span>
+										<ul class="reset dn">
+											<li class="mr_on">乌鲁木齐</li>
+											<li>石河子</li>
+											<li>克拉玛依</li>
+											<li>吐鲁番</li>
+											<li>哈密</li>
+											<li>昌吉</li>
+											<li>博乐</li>
+											<li>和田</li>
+											<li>阿克苏</li>
+											<li>阿勒</li>
+											<li>喀什</li>
+											<li>塔城</li>
+											<li>库尔勒</li>
+											<li>伊犁</li>
+											<li>克州</li>
+										</ul>
+									</li>
+									<li>
+										<span>香港</span>
+										<ul class="reset dn">
+											<li class="mr_on">香港</li>
+										</ul>
+									</li>
+									<li>
+										<span>澳门</span>
+										<ul class="reset dn">
+											<li class="mr_on">澳门</li>
+										</ul>
+									</li>
+									<li>
+										<span>台湾</span>
+										<ul class="reset dn">
+											<li class="mr_on">台湾</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<label>手机号码</label>
+					<div class="form_wrap mobile_s">
+						<input id="mr_mobile" name="mr_mobile" class="mr_input" type="text">
+						<i class="mr_locks"><em>在简历中保密，仅投递后对方才可查看
+								<i></i></em></i> 
+					</div>
+					<label>联系邮箱</label>
+					<div class="form_wrap email_s">
+						<input id="mr_email" name="mr_email" class="mr_input" type="text">
+						<i class="mr_locks"><em>
+								在简历中保密，仅投递后对方才可查看
+								<i></i>
+							</em></i> 
+					</div>
+					<label>社交帐号主页地址</label>
+					<div class="sns_empty dn">
+						<div class="sns_add_empty">
+							<div class="mr_add_m dn">
+								<i></i>
+								<em></em>
+								<ul class="clearfixs">
+									<li class="sns1" data-flag="1">
+										<span>
+											Twitter
+											<em></em>
+										</span>
+									</li>
+									<li class="sns2" data-flag="2">
+										<span>
+											Dribbble
+											<em></em>
+										</span>
+									</li>
+									<li class="sns3" data-flag="3">
+										<span>
+											Behance
+											<em></em>
+										</span>
+									</li>
+									<li class="sns4" data-flag="4">
+										<span>
+											LinkedIn
+											<em></em>
+										</span>
+									</li>
+									<li class="sns5" data-flag="5">
+										<span>
+											Quora
+											<em></em>
+										</span>
+									</li>
+									<li class="sns6" data-flag="6">
+										<span>
+											Github
+											<em></em>
+										</span>
+									</li>
+									<li class="sns7" data-flag="7">
+										<span>
+											知乎
+											<em></em>
+										</span>
+									</li>
+									<li class="sns8" data-flag="8">
+										<span>
+											LOFTER
+											<em></em>
+										</span>
+									</li>
+									<li class="sns9" data-flag="9">
+										<span>
+											UI中国
+											<em></em>
+										</span>
+									</li>
+									<li class="sns10" data-flag="10">
+										<span>
+											新浪微博
+											<em></em>
+										</span>
+									</li>
+									<li class="sns11" data-flag="11">
+										<span>
+											SegmentFault
+											<em></em>
+										</span>
+									</li>
+									<li class="sns12" data-flag="12">
+										<span>
+											StackoverFlow
+											<em></em>
+										</span>
+									</li>
+								</ul>
+								<div class="mr_add_op clearfixs">
+									<a href="http://www.lagoujobs.com/forum.php?mod=viewthread&amp;tid=26499&amp;extra=page%3D1" target="_blank" class="mr_none_my">没有我常用的</a>
+									<a href="javascript:;" class="sns_cancel">取消</a>
+									<a href="javascript:;" class="sns_save">选好了</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sns_area"></div>
+					<div class="mr_add_sns">
+						<div class="mr_add_m dn">
+							<i></i>
+							<em></em>
+							<ul class="clearfixs">
+								<li class="sns1" data-flag="1">
+									<span>
+										Twitter
+										<em></em>
+									</span>
+								</li>
+								<li class="sns2" data-flag="2">
+									<span>
+										Dribbble
+										<em></em>
+									</span>
+								</li>
+								<li class="sns3" data-flag="3">
+									<span>
+										Behance
+										<em></em>
+									</span>
+								</li>
+								<li class="sns4" data-flag="4">
+									<span>
+										LinkedIn
+										<em></em>
+									</span>
+								</li>
+								<li class="sns5" data-flag="5">
+									<span>
+										Quora
+										<em></em>
+									</span>
+								</li>
+								<li class="sns6" data-flag="6">
+									<span>
+										Github
+										<em></em>
+									</span>
+								</li>
+								<li class="sns7" data-flag="7">
+									<span>
+										知乎
+										<em></em>
+									</span>
+								</li>
+								<li class="sns8" data-flag="8">
+									<span>
+										LOFTER
+										<em></em>
+									</span>
+								</li>
+								<li class="sns9" data-flag="9">
+									<span>
+										UI中国
+										<em></em>
+									</span>
+								</li>
+								<li class="sns10" data-flag="10">
+									<span>
+										新浪微博
+										<em></em>
+									</span>
+								</li>
+								<li class="sns11" data-flag="11">
+									<span>
+										SegmentFault
+										<em></em>
+									</span>
+								</li>
+								<li class="sns12" data-flag="12">
+									<span>
+										StackoverFlow
+										<em></em>
+									</span>
+								</li>
+							</ul>
+							<div class="mr_add_op clearfixs">
+								<a href="http://www.lagoujobs.com/forum.php?mod=viewthread&amp;tid=26499&amp;extra=page%3D1" target="_blank" class="mr_none_my">没有我常用的</a>
+								<a href="javascript:;" class="sns_cancel">取消</a>
+								<a href="javascript:;" class="sns_save">选好了</a>
+							</div>
+						</div>
+						<span class="sns_add">
+							<i></i>
+							<em>添加更多主页地址</em>
+						</span>
+					</div>
+					<div class="mr_ope">
+						<input class="mr_save" value="保存" type="submit">
+						<a href="javascript:;" class="mr_cancel" data-birthday="" data-sf="软件开发工程师" data-shenfen="软件开发工程师 · 广东省工合股权基金有限公司" data-sex="" data-xl="本科" data-gzjy="3年" data-city="深圳" data-mobile="15323850269" data-email="yu_shuangxiang@sina.com">取消</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="mr_content">
+		<div id="workExperience" class="item_container_target">
+			<div class="mr_moudle_head clearfixs mr_w604">
+				<div class="mr_head_l">
+					<div class="mr_title">
+						<span class="mr_title_l"></span>
+						<span class="mr_title_c">工作经历</span>
+						<span class="mr_title_r"></span>
+					</div>
+				</div>
+				<div class="mr_head_r">
+					<i></i>
+					<em>添加</em>
+				</div>
+			</div>
+			<div class="mr_moudle_content mr_w604">
+				<form class="jobExpForm dn" id="addJobForm">
+					<div class="mr_add_work">
+						<div class="mr_upload_logo">
+							<div>
+								<i></i>
+								<span>上传公司LOGO</span>
+							</div>
+							<input id="companyLogo" name="companyLogo" onchange="myresumeCommon.utils.imageUpload(this,myresumeCommon.requestTargets.uploadLogo,uploadCompanyLogo.upSucc,uploadCompanyLogo.upFail);" title="目前仅支持10MB以内的PNG/JPG/JPEG/GIF图片" type="file">
+							<img src="" class="logo_u" name="mr_company_logo" alt=""></div>
+						<label>公司</label>
+						<div class="mr_input_div mr_click_flag">
+							<input class="mr_btn companyName" id="companyName" name="companyName"></div>
+						<label>职位</label>
+						<div class="mr_input_div mr_click_flag">
+							<input class="mr_btn autoPosition" id="positionName" name="positionName"></div>
+						<label>在职时间</label>
+						<div class="clearfixs mr_time_area">
+							<div class="mr_timed_div mr_sta_time fl">
+								<i class="mr_sj"></i>
+								<input class="mr_btn" type="button">
+								<input id="startTime" name="startTime" type="hidden">
+								<div class="mr_calendar_ym clearfixs dn">
+									<ul class="mr_year">
+										<li class="today">2015</li>
+										<li>2014</li>
+										<li>2013</li>
+										<li>2012</li>
+										<li>2011</li>
+										<li>2010</li>
+										<li>2009</li>
+										<li>2008</li>
+										<li>2007</li>
+										<li>2006</li>
+										<li>2005</li>
+										<li>2004</li>
+										<li>2003</li>
+										<li>2002</li>
+										<li>2001</li>
+										<li>2000</li>
+										<li>1999</li>
+										<li>1998</li>
+										<li>1997</li>
+										<li>1996</li>
+										<li>1995</li>
+										<li>1994</li>
+										<li>1993</li>
+										<li>1992</li>
+										<li>1991</li>
+										<li>1990</li>
+										<li>1989</li>
+									</ul>
+									<ul class="mr_month clearfixs">
+										<li>
+											<span>1月</span>
+										</li>
+										<li>
+											<span>2月</span>
+										</li>
+										<li class="mr0">
+											<span>3月</span>
+										</li>
+										<li>
+											<span>4月</span>
+										</li>
+										<li>
+											<span class="today">5月</span>
+										</li>
+										<li class="mr0">
+											<span>6月</span>
+										</li>
+										<li>
+											<span>7月</span>
+										</li>
+										<li>
+											<span>8月</span>
+										</li>
+										<li class="mr0">
+											<span>9月</span>
+										</li>
+										<li class="mb0">
+											<span>10月</span>
+										</li>
+										<li class="mb0">
+											<span>11月</span>
+										</li>
+										<li class="mr0 mb0">
+											<span>12月</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="mr_timed_div fl">
+								<i class="mr_sj"></i>
+								<input class="mr_btn" type="button">
+								<input id="endTime" name="endTime" type="hidden">
+								<div class="mr_calendar_ym clearfixs dn">
+									<ul class="mr_year">
+										<li>至今</li>
+										<li class="today">2015</li>
+										<li>2014</li>
+										<li>2013</li>
+										<li>2012</li>
+										<li>2011</li>
+										<li>2010</li>
+										<li>2009</li>
+										<li>2008</li>
+										<li>2007</li>
+										<li>2006</li>
+										<li>2005</li>
+										<li>2004</li>
+										<li>2003</li>
+										<li>2002</li>
+										<li>2001</li>
+										<li>2000</li>
+										<li>1999</li>
+										<li>1998</li>
+										<li>1997</li>
+										<li>1996</li>
+										<li>1995</li>
+										<li>1994</li>
+										<li>1993</li>
+										<li>1992</li>
+										<li>1991</li>
+										<li>1990</li>
+										<li>1989</li>
+									</ul>
+									<ul class="mr_month clearfixs">
+										<li>
+											<span>1月</span>
+										</li>
+										<li>
+											<span>2月</span>
+										</li>
+										<li class="mr0">
+											<span>3月</span>
+										</li>
+										<li>
+											<span>4月</span>
+										</li>
+										<li>
+											<span class="today">5月</span>
+										</li>
+										<li class="mr0">
+											<span>6月</span>
+										</li>
+										<li>
+											<span>7月</span>
+										</li>
+										<li>
+											<span>8月</span>
+										</li>
+										<li class="mr0">
+											<span>9月</span>
+										</li>
+										<li class="mb0">
+											<span>10月</span>
+										</li>
+										<li class="mb0">
+											<span>11月</span>
+										</li>
+										<li class="mr0 mb0">
+											<span>12月</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<label>工作内容</label>
+						<div id="mr_job_mce" class="mr_click_flag wrap_editor">
+							<textarea aria-hidden="true" class="tinymce" id="jobContent" name="jobContent" style="width: 520px; height: 148px; display: none;">&lt;p&gt;&lt;br&gt;&lt;/p&gt;</textarea>
+							<span class="mceEditor defaultSkin" id="jobContent_parent" aria-labelledby="jobContent_voice" role="application">
+								<span id="jobContent_voice" style="display:none;" class="mceVoiceLabel">富文本域</span>
+								<table style="width: 520px; height: 148px;" class="mceLayout" id="jobContent_tbl" role="presentation" cellpadding="0" cellspacing="0">
+									<tbody>
+										<tr class="mceFirst" role="presentation">
+											<td role="toolbar" class="mceToolbar mceLeft mceFirst mceLast">
+												<div tabindex="-1" id="jobContent_toolbargroup" role="group" aria-labelledby="jobContent_toolbargroup_voice">
+													<span role="application">
+														<span id="jobContent_toolbargroup_voice" class="mceVoiceLabel" style="display:none;">工具栏</span>
+														<table aria-pressed="false" aria-disabled="false" id="jobContent_toolbar1" class="mceToolbar mceToolbarRow1 Enabled" role="presentation" tabindex="-1" cellpadding="0" cellspacing="0" align="">
+															<tbody>
+																<tr>
+																	<td class="mceToolbarStart mceToolbarStartButton mceFirst">
+																		<span>
+																			<!-- IE -->
+																		</span>
+																	</td>
+																	<td style="position: relative">
+																		<a aria-pressed="false" tabindex="-1" role="button" id="jobContent_bullist" href="javascript:;" class="mceButton mceButtonEnabled mce_bullist" onmousedown="return false;" onclick="return false;" aria-labelledby="jobContent_bullist_voice" title="项目列表">
+																			<span class="mceIcon mce_bullist"></span>
+																			<span class="mceVoiceLabel mceIconOnly" style="display: none;" id="jobContent_bullist_voice">项目列表</span>
+																		</a>
+																	</td>
+																	<td style="position: relative">
+																		<a aria-pressed="false" tabindex="-1" role="button" id="jobContent_numlist" href="javascript:;" class="mceButton mceButtonEnabled mce_numlist" onmousedown="return false;" onclick="return false;" aria-labelledby="jobContent_numlist_voice" title="编号列表">
+																			<span class="mceIcon mce_numlist"></span>
+																			<span class="mceVoiceLabel mceIconOnly" style="display: none;" id="jobContent_numlist_voice">编号列表</span>
+																		</a>
+																	</td>
+																	<td class="mceToolbarEnd mceToolbarEndButton mceLast">
+																		<span>
+																			<!-- IE -->
+																		</span>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</span>
+												</div>
+												<a href="#" accesskey="z" title="转到工具按钮 - Alt-Q，转到编辑器 - Alt-Z，转到元素路径 - Alt-X。" onfocus="tinyMCE.getInstanceById('jobContent').focus();">
+													<!-- IE -->
+												</a>
+											</td>
+										</tr>
+										<tr class="mceLast">
+											<td class="mceIframeContainer mceFirst mceLast">
+												<iframe style="width: 100%; height: 125px; display: block;" title="富文本域按 ALT-F10 定位到工具栏.按 ALT-0 获取帮助。" allowtransparency="true" src='javascript:""' id="jobContent_ifr" frameborder="0"></iframe>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</span>
+						</div>
+						<div class="mr_ope clearfixs">
+							<input class="mr_save" value="保存" type="submit">
+							<a href="javascript:;" class="mr_cancel">取消</a>
+						</div>
+					</div>
+				</form>
+				<div class="mr_empty_add dn">
+					<i></i>
+					<span>添加工作经历</span>
+				</div>
+				<div class="list_show">
+					<div class="mr_jobe_list">
+						<div class="clearfixs">
+							<div class="mr_content_l clearfixs">
+								<div class="l2">
+									<h4>广东省工合股权基金有限公司</h4>
+									<span>软件开发工程师</span>
+								</div>
+							</div>
+							<div class="mr_content_r">
+								<div class="mr_edit mr_c_r_t" data-expid="2612999" data-logo="" data-comname="广东省工合股权基金有限公司" data-posname="软件开发工程师" data-startime="2014.01" data-endtime="至今" data-content="">
+									<i></i>
+									<em>编辑</em>
+								</div>
+								<span>2014.01</span>
+								<span>—</span>
+								<span>至今</span>
+							</div>
+						</div>
+						<div class="dn mr_content_m"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="educationalBackground" class="item_container_target">
+			<div class="mr_moudle_head clearfixs mr_w604">
+				<div class="mr_head_l">
+					<div class="mr_title">
+						<span class="mr_title_l"></span>
+						<span class="mr_title_c">教育经历</span>
+						<span class="mr_title_r"></span>
+					</div>
+				</div>
+				<div class="mr_head_r">
+					<i></i>
+					<em>添加</em>
+				</div>
+			</div>
+			<div class="mr_moudle_content mr_w604">
+				<form class="eduExpForm dn" id="addEduForm">
+					<!-- <input type="hidden" id="eduId" name="eduId" value="" />
+					-->
+					<div class="mr_add_work">
+						<label>学校名称</label>
+						<div class="mr_input_div mr_click_flag">
+							<input class="mr_btn" name="schoolName" type="text"></div>
+						<label>所学专业</label>
+						<div class="mr_input_div mr_click_flag">
+							<input class="mr_btn" name="positionName" type="text"></div>
+						<label>
+							<span>学历</span>
+							<span class="label_by_y">毕业年份</span>
+						</label>
+						<div class="clearfixs mr_time_area">
+							<div class="mr_timed_div normal_s mr_sta_time fl">
+								<i class="mr_sj"></i>
+								<input name="degree_text" type="hidden">
+								<input class="mr_btn" name="degree_val" type="button">
+								<div style="display: none;" class="xl_list dn">
+									<ul class="ul_edubg">
+										<li>大专</li>
+										<li>本科</li>
+										<li>硕士</li>
+										<li>博士</li>
+										<li>其他</li>
+									</ul>
+								</div>
+							</div>
+							<div class="mr_timed_div normal_s fl">
+								<i class="mr_sj"></i>
+								<input name="graduate_text" type="hidden">
+								<input class="mr_btn" onchange="validateChange(this);" name="graduate" type="button">
+								<div style="display: none;" class="xl_list dn">
+									<ul class="ul_eduy">
+										<li>2017</li>
+										<li>2016</li>
+										<li>2015</li>
+										<li>2014</li>
+										<li>2013</li>
+										<li>2012</li>
+										<li>2011</li>
+										<li>2010</li>
+										<li>2009</li>
+										<li>2008</li>
+										<li>2007</li>
+										<li>2006</li>
+										<li>2005</li>
+										<li>2004</li>
+										<li>2003</li>
+										<li>2002</li>
+										<li>2001</li>
+										<li>2000</li>
+										<li>1999</li>
+										<li>1998</li>
+										<li>1997</li>
+										<li>1996</li>
+										<li>1995</li>
+										<li>1994</li>
+										<li>1993</li>
+										<li>1992</li>
+										<li>1991</li>
+										<li>1990</li>
+										<li>1989</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="mr_ope clearfixs">
+							<input class="mr_save" value="保存" type="submit">
+							<a href="javascript:;" class="mr_cancel">取消</a>
+						</div>
+					</div>
+				</form>
+				<div class="mr_empty_add dn">
+					<i></i>
+					<span>添加教育经历</span>
+				</div>
+				<div class="list_show">
+					<div class="clearfixs mb46 mr_jobe_list">
+						<div class="mr_content_l">
+							<div class="l1">
+								<img src="__PUBLIC__/Home/images/19176ec0a93c480a960abb79a22e994a.jpg" alt="学校Logo"></div>
+							<div class="l2">
+								<h4>湖北理工学院</h4>
+								<span>本科 · 机电一体化工程</span>
+							</div>
+						</div>
+						<div class="mr_content_r">
+							<div class="mr_edit mr_c_r_t" data-eduid="1530565" data-schoolname="湖北理工学院" data-edu="本科" data-pro="机电一体化工程" data-date="2014">
+								<i></i>
+								<em>编辑</em>
+							</div>
+							<!-- <span>2014年毕业</span>
+						-->
+						<span>2014年毕业</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="projectExperience" class="dn item_container_target">
+		<div class="mr_moudle_head clearfixs mr_w604">
+			<div class="mr_head_l">
+				<div class="mr_title">
+					<span class="mr_title_l"></span>
+					<span class="mr_title_c">项目经验</span>
+					<span class="mr_title_r"></span>
+				</div>
+			</div>
+			<div class="mr_head_r">
+				<i></i>
+				<em>添加</em>
+			</div>
+		</div>
+		<div class="mr_moudle_content mr_w604">
+			<form class="proExpForm dn" id="addProForm">
+				<!--addProForm js赋值  -->
+				<div class="mr_add_work">
+					<label>项目名称</label>
+					<div class="mr_input_div mr_click_flag">
+						<input class="mr_btn" id="projectName" name="projectName"></div>
+					<label>你的职责</label>
+					<div class="mr_input_div mr_click_flag">
+						<input class="mr_btn" id="thePost" name="thePost"></div>
+					<label>项目起止时间</label>
+					<div class="clearfixs mr_time_area">
+						<div class="mr_timed_div mr_sta_time fl">
+							<i class="mr_sj"></i>
+							<input class="mr_btn" type="button">
+							<input name="startTime" type="hidden">
+							<div class="mr_calendar_ym clearfixs dn">
+								<ul class="mr_year">
+									<li class="today">2015</li>
+									<li>2014</li>
+									<li>2013</li>
+									<li>2012</li>
+									<li>2011</li>
+									<li>2010</li>
+									<li>2009</li>
+									<li>2008</li>
+									<li>2007</li>
+									<li>2006</li>
+									<li>2005</li>
+									<li>2004</li>
+									<li>2003</li>
+									<li>2002</li>
+									<li>2001</li>
+									<li>2000</li>
+									<li>1999</li>
+									<li>1998</li>
+									<li>1997</li>
+									<li>1996</li>
+									<li>1995</li>
+									<li>1994</li>
+									<li>1993</li>
+									<li>1992</li>
+									<li>1991</li>
+									<li>1990</li>
+									<li>1989</li>
+								</ul>
+								<ul class="mr_month clearfixs">
+									<li>
+										<span>1月</span>
+									</li>
+									<li>
+										<span>2月</span>
+									</li>
+									<li class="mr0">
+										<span>3月</span>
+									</li>
+									<li>
+										<span>4月</span>
+									</li>
+									<li>
+										<span class="today">5月</span>
+									</li>
+									<li class="mr0">
+										<span>6月</span>
+									</li>
+									<li>
+										<span>7月</span>
+									</li>
+									<li>
+										<span>8月</span>
+									</li>
+									<li class="mr0">
+										<span>9月</span>
+									</li>
+									<li class="mb0">
+										<span>10月</span>
+									</li>
+									<li class="mb0">
+										<span>11月</span>
+									</li>
+									<li class="mr0 mb0">
+										<span>12月</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="mr_timed_div fl">
+							<i class="mr_sj"></i>
+							<input class="mr_btn" type="button">
+							<input name="endTime" type="hidden">
+							<div class="mr_calendar_ym clearfixs dn">
+								<ul class="mr_year">
+									<li>至今</li>
+									<li class="today">2015</li>
+									<li>2014</li>
+									<li>2013</li>
+									<li>2012</li>
+									<li>2011</li>
+									<li>2010</li>
+									<li>2009</li>
+									<li>2008</li>
+									<li>2007</li>
+									<li>2006</li>
+									<li>2005</li>
+									<li>2004</li>
+									<li>2003</li>
+									<li>2002</li>
+									<li>2001</li>
+									<li>2000</li>
+									<li>1999</li>
+									<li>1998</li>
+									<li>1997</li>
+									<li>1996</li>
+									<li>1995</li>
+									<li>1994</li>
+									<li>1993</li>
+									<li>1992</li>
+									<li>1991</li>
+									<li>1990</li>
+									<li>1989</li>
+								</ul>
+								<ul class="mr_month clearfixs">
+									<li>
+										<span>1月</span>
+									</li>
+									<li>
+										<span>2月</span>
+									</li>
+									<li class="mr0">
+										<span>3月</span>
+									</li>
+									<li>
+										<span>4月</span>
+									</li>
+									<li>
+										<span class="today">5月</span>
+									</li>
+									<li class="mr0">
+										<span>6月</span>
+									</li>
+									<li>
+										<span>7月</span>
+									</li>
+									<li>
+										<span>8月</span>
+									</li>
+									<li class="mr0">
+										<span>9月</span>
+									</li>
+									<li class="mb0">
+										<span>10月</span>
+									</li>
+									<li class="mb0">
+										<span>11月</span>
+									</li>
+									<li class="mr0 mb0">
+										<span>12月</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<label>项目描述</label>
+					<div id="mr_job_mce" class="mr_click_flag mr_time_area wrap_editor">
+						<textarea aria-hidden="true" class="tinymce" style="width: 520px; height: 148px; display: none;" id="proDescript" name="proDescript">&lt;p&gt;&lt;br&gt;&lt;/p&gt;</textarea>
+						<span class="mceEditor defaultSkin" id="proDescript_parent" aria-labelledby="proDescript_voice" role="application">
+							<span id="proDescript_voice" style="display:none;" class="mceVoiceLabel">富文本域</span>
+							<table style="width: 520px; height: 148px;" class="mceLayout" id="proDescript_tbl" role="presentation" cellpadding="0" cellspacing="0">
+								<tbody>
+									<tr class="mceFirst" role="presentation">
+										<td role="toolbar" class="mceToolbar mceLeft mceFirst mceLast">
+											<div tabindex="-1" id="proDescript_toolbargroup" role="group" aria-labelledby="proDescript_toolbargroup_voice">
+												<span role="application">
+													<span id="proDescript_toolbargroup_voice" class="mceVoiceLabel" style="display:none;">工具栏</span>
+													<table aria-pressed="false" aria-disabled="false" id="proDescript_toolbar1" class="mceToolbar mceToolbarRow1 Enabled" role="presentation" tabindex="-1" cellpadding="0" cellspacing="0" align="">
+														<tbody>
+															<tr>
+																<td class="mceToolbarStart mceToolbarStartButton mceFirst">
+																	<span>
+																		<!-- IE -->
+																	</span>
+																</td>
+																<td style="position: relative">
+																	<a aria-pressed="false" tabindex="-1" role="button" id="proDescript_bullist" href="javascript:;" class="mceButton mceButtonEnabled mce_bullist" onmousedown="return false;" onclick="return false;" aria-labelledby="proDescript_bullist_voice" title="项目列表">
+																		<span class="mceIcon mce_bullist"></span>
+																		<span class="mceVoiceLabel mceIconOnly" style="display: none;" id="proDescript_bullist_voice">项目列表</span>
+																	</a>
+																</td>
+																<td style="position: relative">
+																	<a aria-pressed="false" tabindex="-1" role="button" id="proDescript_numlist" href="javascript:;" class="mceButton mceButtonEnabled mce_numlist" onmousedown="return false;" onclick="return false;" aria-labelledby="proDescript_numlist_voice" title="编号列表">
+																		<span class="mceIcon mce_numlist"></span>
+																		<span class="mceVoiceLabel mceIconOnly" style="display: none;" id="proDescript_numlist_voice">编号列表</span>
+																	</a>
+																</td>
+																<td class="mceToolbarEnd mceToolbarEndButton mceLast">
+																	<span>
+																		<!-- IE -->
+																	</span>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</span>
+											</div>
+											<a href="#" accesskey="z" title="转到工具按钮 - Alt-Q，转到编辑器 - Alt-Z，转到元素路径 - Alt-X。" onfocus="tinyMCE.getInstanceById('proDescript').focus();">
+												<!-- IE -->
+											</a>
+										</td>
+									</tr>
+									<tr class="mceLast">
+										<td class="mceIframeContainer mceFirst mceLast">
+											<iframe style="width: 100%; height: 125px; display: block;" title="富文本域按 ALT-F10 定位到工具栏.按 ALT-0 获取帮助。" allowtransparency="true" src='javascript:""' id="proDescript_ifr" frameborder="0"></iframe>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</span>
+					</div>
+					<label>项目链接（若有）</label>
+					<div class="mr_input_div mr_click_flag  mr_prolink">
+						<input class="mr_btn" id="pro_link" name="pro_link"></div>
+					<div class="mr_ope clearfixs">
+						<input class="mr_save" value="保存" type="submit">
+						<a href="javascript:;" class="mr_cancel">取消</a>
+					</div>
+				</div>
+			</form>
+			<div class="mr_empty_add ">
+				<i></i>
+				<span>添加项目经验</span>
+			</div>
+			<div class="list_show"></div>
+		</div>
+	</div>
+
+	<div id="worksShow" class="dn item_container_target">
+		<div class="mr_moudle_head clearfixs mr_w604">
+			<div class="mr_head_l">
+				<div class="mr_title">
+					<span class="mr_title_l"></span>
+					<span class="mr_title_c">作品展示</span>
+					<span class="mr_title_r"></span>
+				</div>
+			</div>
+			<div class="mr_head_r">
+				<i></i>
+				<em>添加</em>
+			</div>
+		</div>
+		<div class="mr_moudle_content mr_w604">
+			<div id="worksshowForms" class="mr_worksshow_forms dn">
+				<!-- 上传图片的form -->
+				<form class="add_worksshow_form" id="addWorksShowUploadForm">
+					<div class="mr_add_work mr_addwork_online">
+						<div class="mr_worksshow_tab">
+							<span class="mr_wst_upimage selected">上传图片</span>
+							<span class="mr_wst_uponline">在线作品</span>
+						</div>
+						<!-- 图片上传区域 -->
+						<div class="mr_worksshow_upimage">
+							<div>
+								<i></i>
+								<span>上传作品图片</span>
+							</div>
+							<input name="workPicHidden" class="work-pic-hidden" type="hidden">
+							<input class="worksshow_up" id="worksshowUp" name="workPic" title="目前仅支持10MB以内的PNG/JPG/JPEG/GIF图片" onchange="myresumeCommon.utils.imageUpload( this, myresumeCommon.requestTargets.workUpload, worksShowOperator.addUploadSucc, worksShowOperator.addUploadFail );" type="file">
+							<img id="worksshowUpShow" src="" alt="" class="worksshow_img"></div>
+						<label>作品标题</label>
+						<div class="mr_input_div mr_click_flag">
+							<input class="mr_btn" id="workUploadTitle" name="workTitle"></div>
+						<label>作品描述</label>
+						<div id="workImagesDesc" class="mr_click_flag wrap_editor">
+							<textarea aria-hidden="true" class="tinymce" id="workImagesDescContent" name="workDescribe" style="width: 520px; height: 148px; display: none;">&lt;p&gt;&lt;br&gt;&lt;/p&gt;</textarea>
+							<span class="mceEditor defaultSkin" id="workImagesDescContent_parent" aria-labelledby="workImagesDescContent_voice" role="application">
+								<span id="workImagesDescContent_voice" style="display:none;" class="mceVoiceLabel">富文本域</span>
+								<table style="width: 520px; height: 148px;" class="mceLayout" id="workImagesDescContent_tbl" role="presentation" cellpadding="0" cellspacing="0">
+									<tbody>
+										<tr class="mceFirst" role="presentation">
+											<td role="toolbar" class="mceToolbar mceLeft mceFirst mceLast">
+												<div tabindex="-1" id="workImagesDescContent_toolbargroup" role="group" aria-labelledby="workImagesDescContent_toolbargroup_voice">
+													<span role="application">
+														<span id="workImagesDescContent_toolbargroup_voice" class="mceVoiceLabel" style="display:none;">工具栏</span>
+														<table aria-pressed="false" aria-disabled="false" id="workImagesDescContent_toolbar1" class="mceToolbar mceToolbarRow1 Enabled" role="presentation" tabindex="-1" cellpadding="0" cellspacing="0" align="">
+															<tbody>
+																<tr>
+																	<td class="mceToolbarStart mceToolbarStartButton mceFirst">
+																		<span>
+																			<!-- IE -->
+																		</span>
+																	</td>
+																	<td class="ulolBorder" style="position: relative">
+																		<a aria-pressed="false" tabindex="-1" role="button" id="workImagesDescContent_bullist" href="javascript:;" class="mceButton mceButtonEnabled mce_bullist" onmousedown="return false;" onclick="return false;" aria-labelledby="workImagesDescContent_bullist_voice" title="项目列表">
+																			<span class="mceIcon mce_bullist"></span>
+																			<span class="mceVoiceLabel mceIconOnly" style="display: none;" id="workImagesDescContent_bullist_voice">项目列表</span>
+																		</a>
+																	</td>
+																	<td class="ulolBorder" style="position: relative">
+																		<a aria-pressed="false" tabindex="-1" role="button" id="workImagesDescContent_numlist" href="javascript:;" class="mceButton mceButtonEnabled mce_numlist" onmousedown="return false;" onclick="return false;" aria-labelledby="workImagesDescContent_numlist_voice" title="编号列表">
+																			<span class="mceIcon mce_numlist"></span>
+																			<span class="mceVoiceLabel mceIconOnly" style="display: none;" id="workImagesDescContent_numlist_voice">编号列表</span>
+																		</a>
+																	</td>
+																	<td class="mceToolbarEnd mceToolbarEndButton mceLast">
+																		<span>
+																			<!-- IE -->
+																		</span>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</span>
+												</div>
+												<a href="#" accesskey="z" title="转到工具按钮 - Alt-Q，转到编辑器 - Alt-Z，转到元素路径 - Alt-X。" onfocus="tinyMCE.getInstanceById('workImagesDescContent').focus();">
+													<!-- IE -->
+												</a>
+											</td>
+										</tr>
+										<tr class="mceLast">
+											<td class="mceIframeContainer mceFirst mceLast">
+												<iframe style="width: 100%; height: 125px; display: block;" title="富文本域按 ALT-F10 定位到工具栏.按 ALT-0 获取帮助。" allowtransparency="true" src='javascript:""' id="workImagesDescContent_ifr" frameborder="0"></iframe>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</span>
+						</div>
+						<div class="mr_ope clearfixs">
+							<input class="mr_save" value="保存" type="submit">
+							<a href="javascript:;" class="mr_cancel">取消</a>
+						</div>
+					</div>
+				</form>
+
+				<!-- 新增在线作品的foram -->
+				<form class="add_worksshow_form dn" id="addWorksShowOnlineForm">
+					<div class="mr_add_work mr_addwork_image">
+						<div class="mr_worksshow_tab">
+							<span class="mr_wst_upimage">上传图片</span>
+							<span class="mr_wst_uponline selected">在线作品</span>
+						</div>
+						<div class="mr_wo_show">
+							<div class="mr_self_site">
+								<div class="mr_self_sitelink">www.example.com</div>
+							</div>
+							<div class="mr_wo_preview">
+								<p>这里是你的作品描述</p>
+							</div>
+						</div>
+						<label>作品地址</label>
+						<div class="mr_input_div mr_click_flag">
+							<input class="mr_btn" id="workOnlineUrl" name="url"></div>
+						<label>作品描述</label>
+						<div id="workOnlineDesc" class="mr_click_flag wrap_editor">
+							<textarea aria-hidden="true" class="tinymce" id="workOnlineDescContent" name="workDescribeOnline" style="width: 520px; height: 148px; display: none;">&lt;p&gt;&lt;br&gt;&lt;/p&gt;</textarea>
+							<span class="mceEditor defaultSkin" id="workOnlineDescContent_parent" aria-labelledby="workOnlineDescContent_voice" role="application">
+								<span id="workOnlineDescContent_voice" style="display:none;" class="mceVoiceLabel">富文本域</span>
+								<table style="width: 520px; height: 148px;" class="mceLayout" id="workOnlineDescContent_tbl" role="presentation" cellpadding="0" cellspacing="0">
+									<tbody>
+										<tr class="mceFirst" role="presentation">
+											<td role="toolbar" class="mceToolbar mceLeft mceFirst mceLast">
+												<div tabindex="-1" id="workOnlineDescContent_toolbargroup" role="group" aria-labelledby="workOnlineDescContent_toolbargroup_voice">
+													<span role="application">
+														<span id="workOnlineDescContent_toolbargroup_voice" class="mceVoiceLabel" style="display:none;">工具栏</span>
+														<table aria-pressed="false" aria-disabled="false" id="workOnlineDescContent_toolbar1" class="mceToolbar mceToolbarRow1 Enabled" role="presentation" tabindex="-1" cellpadding="0" cellspacing="0" align="">
+															<tbody>
+																<tr>
+																	<td class="mceToolbarStart mceToolbarStartButton mceFirst">
+																		<span>
+																			<!-- IE -->
+																		</span>
+																	</td>
+																	<td class="ulolBorder" style="position: relative">
+																		<a aria-pressed="false" tabindex="-1" role="button" id="workOnlineDescContent_bullist" href="javascript:;" class="mceButton mceButtonEnabled mce_bullist" onmousedown="return false;" onclick="return false;" aria-labelledby="workOnlineDescContent_bullist_voice" title="项目列表">
+																			<span class="mceIcon mce_bullist"></span>
+																			<span class="mceVoiceLabel mceIconOnly" style="display: none;" id="workOnlineDescContent_bullist_voice">项目列表</span>
+																		</a>
+																	</td>
+																	<td class="ulolBorder" style="position: relative">
+																		<a aria-pressed="false" tabindex="-1" role="button" id="workOnlineDescContent_numlist" href="javascript:;" class="mceButton mceButtonEnabled mce_numlist" onmousedown="return false;" onclick="return false;" aria-labelledby="workOnlineDescContent_numlist_voice" title="编号列表">
+																			<span class="mceIcon mce_numlist"></span>
+																			<span class="mceVoiceLabel mceIconOnly" style="display: none;" id="workOnlineDescContent_numlist_voice">编号列表</span>
+																		</a>
+																	</td>
+																	<td class="mceToolbarEnd mceToolbarEndButton mceLast">
+																		<span>
+																			<!-- IE -->
+																		</span>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</span>
+												</div>
+												<a href="#" accesskey="z" title="转到工具按钮 - Alt-Q，转到编辑器 - Alt-Z，转到元素路径 - Alt-X。" onfocus="tinyMCE.getInstanceById('workOnlineDescContent').focus();">
+													<!-- IE -->
+												</a>
+											</td>
+										</tr>
+										<tr class="mceLast">
+											<td class="mceIframeContainer mceFirst mceLast">
+												<iframe style="width: 100%; height: 125px; display: block;" title="富文本域按 ALT-F10 定位到工具栏.按 ALT-0 获取帮助。" allowtransparency="true" src='javascript:""' id="workOnlineDescContent_ifr" frameborder="0"></iframe>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</span>
+						</div>
+						<div class="mr_ope clearfixs">
+							<input class="mr_save" value="保存" type="submit">
+							<a href="javascript:;" class="mr_cancel">取消</a>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="mr_empty_add ">
+				<i></i>
+				<span>展示我的作品</span>
+			</div>
+			<!-- 在线作品 -->
+			<div class="mr_work_online"></div>
+			<div class="mr_work_upload"></div>
+
+		</div>
+	</div>
+
+	<div id="selfDescription" class="dn item_container_target">
+		<div>
+			<div class="mr_moudle_head clearfixs mr_w604">
+				<div class="mr_head_l">
+					<div class="mr_title">
+						<span class="mr_title_l"></span>
+						<span class="mr_title_c">自我描述</span>
+						<span class="mr_title_r"></span>
+					</div>
+				</div>
+				<div class="mr_head_r">
+					<i></i>
+					<em>编辑</em>
+				</div>
+			</div>
+			<div class="mr_moudle_content clearfixs mr_w604">
+				<form id="upSelfForm" class="dn">
+					<div class="mr_add_work">
+						<i></i>
+						<img alt="头像" class="mr_headimg" src="__PUBLIC__/Home/images/default_headpic.png">
+						<div class="self_tip">
+							<h3>提供几个思路，试着从这些点描述自己：</h3>
+							<p>
+								· 你认为值得称道的工作细节；
+								<br>
+								· 你曾经克服过的最大挑战；
+								<br>
+								· 你在找工作时最看重的方面；
+								<br>
+								· 你曾经引以为豪的个人项目或者事迹；
+								<br>
+								· 如果你是一位团队领导者，说说你的管理哲学以及独到的行业见解
+								<br>· 其它你认为能展示你优势的事情</p>
+						</div>
+						<label>自我描述</label>
+						<div id="mr_job_mce" class="mr_click_flag wrap_editor">
+							<textarea aria-hidden="true" class="tinymce" style="width: 520px; height: 148px; display: none;" id="self" name="self_des">&lt;p&gt;&lt;br&gt;&lt;/p&gt;</textarea>
+							<span class="mceEditor defaultSkin" id="self_parent" aria-labelledby="self_voice" role="application">
+								<span id="self_voice" style="display:none;" class="mceVoiceLabel">富文本域</span>
+								<table style="width: 520px; height: 148px;" class="mceLayout" id="self_tbl" role="presentation" cellpadding="0" cellspacing="0">
+									<tbody>
+										<tr class="mceFirst" role="presentation">
+											<td role="toolbar" class="mceToolbar mceLeft mceFirst mceLast">
+												<div tabindex="-1" id="self_toolbargroup" role="group" aria-labelledby="self_toolbargroup_voice">
+													<span role="application">
+														<span id="self_toolbargroup_voice" class="mceVoiceLabel" style="display:none;">工具栏</span>
+														<table aria-pressed="false" aria-disabled="false" id="self_toolbar1" class="mceToolbar mceToolbarRow1 Enabled" role="presentation" tabindex="-1" cellpadding="0" cellspacing="0" align="">
+															<tbody>
+																<tr>
+																	<td class="mceToolbarStart mceToolbarStartButton mceFirst">
+																		<span>
+																			<!-- IE -->
+																		</span>
+																	</td>
+																	<td style="position: relative">
+																		<a aria-pressed="false" tabindex="-1" role="button" id="self_bullist" href="javascript:;" class="mceButton mceButtonEnabled mce_bullist" onmousedown="return false;" onclick="return false;" aria-labelledby="self_bullist_voice" title="项目列表">
+																			<span class="mceIcon mce_bullist"></span>
+																			<span class="mceVoiceLabel mceIconOnly" style="display: none;" id="self_bullist_voice">项目列表</span>
+																		</a>
+																	</td>
+																	<td style="position: relative">
+																		<a aria-pressed="false" tabindex="-1" role="button" id="self_numlist" href="javascript:;" class="mceButton mceButtonEnabled mce_numlist" onmousedown="return false;" onclick="return false;" aria-labelledby="self_numlist_voice" title="编号列表">
+																			<span class="mceIcon mce_numlist"></span>
+																			<span class="mceVoiceLabel mceIconOnly" style="display: none;" id="self_numlist_voice">编号列表</span>
+																		</a>
+																	</td>
+																	<td class="mceToolbarEnd mceToolbarEndButton mceLast">
+																		<span>
+																			<!-- IE -->
+																		</span>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</span>
+												</div>
+												<a href="#" accesskey="z" title="转到工具按钮 - Alt-Q，转到编辑器 - Alt-Z，转到元素路径 - Alt-X。" onfocus="tinyMCE.getInstanceById('self').focus();">
+													<!-- IE -->
+												</a>
+											</td>
+										</tr>
+										<tr class="mceLast">
+											<td class="mceIframeContainer mceFirst mceLast">
+												<iframe style="width: 100%; height: 125px; display: block;" title="富文本域按 ALT-F10 定位到工具栏.按 ALT-0 获取帮助。" allowtransparency="true" src='javascript:""' id="self_ifr" frameborder="0"></iframe>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</span>
+						</div>
+						<div class="mr_ope clearfixs">
+							<input class="mr_save" value="保存" type="submit">
+							<a href="javascript:;" class="mr_cancel">取消</a>
+						</div>
+					</div>
+				</form>
+				<div class="mr_empty_add">
+					<i></i>
+					<span>更新自我描述</span>
+				</div>
+
+				<div class="self_des_list clearfixs  dn">
+					<div class="mr_self_l">
+						<i></i>
+						<img class="mr_headimg" src="%E6%B3%A8%E5%86%8C%E5%AE%8C%E6%88%90%E8%B7%B3%E8%BD%AC%E8%87%B3%E6%88%91%E7%9A%84%E7%AE%80%E5%8E%86%E9%A6%96%E9%A1%B5_files/default_headpic.png" alt="头像"></div>
+					<div class="mr_self_r"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="expectJob" class="dn item_container_target">
+		<div>
+			<div class="mr_moudle_head clearfixs mr_w604">
+				<div class="mr_head_l">
+					<div class="mr_title">
+						<span class="mr_title_l"></span>
+						<span class="mr_title_c">期望工作</span>
+						<span class="mr_title_r"></span>
+					</div>
+				</div>
+				<div class="mr_head_r" data-city="">
+					<i></i>
+					<em>编辑</em>
+				</div>
+			</div>
+			<div class="mr_moudle_content clearfixs mr_w604">
+
+				<form class="expJobForm dn" id="upExpJobForm">
+					<!--addProForm js赋值  -->
+					<div class="mr_add_work">
+						<label>期望职位</label>
+						<div class="clearfixs exp_job_mb">
+							<div class="mr_expinput_div mr_click_flag">
+								<input class="mr_btn autoPosition" id="expjobName" name="expjobName" type="text"></div>
+							<div class="mr_exp_type normal_s">
+								<i class="mr_sj"></i>
+								<input class="mr_btn" name="exp_job_type" value="全职" type="button">
+								<div style="display: none;" class="xl_list  dn">
+									<ul class="ul_exptype">
+										<li>全职</li>
+										<li>兼职</li>
+										<li>实习</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<label>
+							<span>期望城市</span>
+							<span class="label_yx">期望月薪</span>
+						</label>
+						<div class="clearfixs exp_job_mb">
+							<div class="city_s mr_job_city fl">
+								<i class="mr_sj"></i>
+								<input class="mr_btn" name="jobCity" type="button">
+								<div style="display: none;" class="xl_list dn">
+									<div class="mr_selCity">
+										<ul class="reset mr_province">
+											<li>
+												<span>热门城市</span>
+												<ul class="reset dn">
+													<li>北京</li>
+													<li>上海</li>
+													<li>广州</li>
+													<li>深圳</li>
+													<li>杭州</li>
+													<li>成都</li>
+													<li>西安</li>
+													<li>南京</li>
+													<li>厦门</li>
+													<li>武汉</li>
+												</ul>
+											</li>
+											<li>
+												<span>北京</span>
+												<ul class="reset dn">
+													<li class="mr_on">北京</li>
+												</ul>
+											</li>
+											<li>
+												<span>上海</span>
+												<ul class="reset dn">
+													<li class="mr_on">上海</li>
+												</ul>
+											</li>
+											<li>
+												<span>天津</span>
+												<ul class="reset dn">
+													<li class="mr_on">天津</li>
+												</ul>
+											</li>
+											<li>
+												<span>重庆</span>
+												<ul class="reset dn">
+													<li class="mr_on">重庆</li>
+												</ul>
+											</li>
+											<li>
+												<span>河北</span>
+												<ul class="reset dn">
+													<li class="mr_on">石家庄</li>
+													<li>唐山</li>
+													<li>秦皇岛</li>
+													<li>邯郸</li>
+													<li>邢台</li>
+													<li>保定</li>
+													<li>张家口</li>
+													<li>承德</li>
+													<li>沧州</li>
+													<li>廊坊</li>
+													<li>衡水</li>
+												</ul>
+											</li>
+											<li>
+												<span>山西</span>
+												<ul class="reset dn">
+													<li class="mr_on">太原</li>
+													<li>大同</li>
+													<li>阳泉</li>
+													<li>长治</li>
+													<li>晋城</li>
+													<li>朔州</li>
+													<li>晋中</li>
+													<li>运城</li>
+													<li>忻州</li>
+													<li>临汾</li>
+													<li>吕梁</li>
+													<li>永济市</li>
+												</ul>
+											</li>
+											<li>
+												<span>内蒙古</span>
+												<ul class="reset dn">
+													<li class="mr_on">呼和浩特</li>
+													<li>包头</li>
+													<li>乌海</li>
+													<li>赤峰</li>
+													<li>通辽</li>
+													<li>鄂尔多斯</li>
+													<li>呼伦贝尔</li>
+													<li>兴安盟</li>
+													<li>锡林郭勒盟</li>
+													<li>乌兰察布</li>
+													<li>巴彦淖尔</li>
+													<li>阿拉善盟</li>
+												</ul>
+											</li>
+											<li>
+												<span>辽宁</span>
+												<ul class="reset dn">
+													<li class="mr_on">沈阳</li>
+													<li>大连</li>
+													<li>鞍山</li>
+													<li>抚顺</li>
+													<li>本溪</li>
+													<li>丹东</li>
+													<li>锦州</li>
+													<li>营口</li>
+													<li>阜新</li>
+													<li>辽阳</li>
+													<li>盘锦</li>
+													<li>铁岭</li>
+													<li>朝阳</li>
+													<li>葫芦岛</li>
+												</ul>
+											</li>
+											<li>
+												<span>吉林</span>
+												<ul class="reset dn">
+													<li class="mr_on">长春</li>
+													<li>吉林</li>
+													<li>四平</li>
+													<li>辽源</li>
+													<li>通化</li>
+													<li>白山</li>
+													<li>松原</li>
+													<li>白城</li>
+													<li>延边朝鲜族自治州</li>
+												</ul>
+											</li>
+											<li>
+												<span>黑龙江</span>
+												<ul class="reset dn">
+													<li class="mr_on">哈尔滨</li>
+													<li>齐齐哈尔</li>
+													<li>鸡西</li>
+													<li>鹤岗</li>
+													<li>双鸭山</li>
+													<li>大庆</li>
+													<li>伊春</li>
+													<li>佳木斯</li>
+													<li>七台河</li>
+													<li>牡丹江</li>
+													<li>黑河</li>
+													<li>绥化</li>
+													<li>大兴安岭地区</li>
+												</ul>
+											</li>
+											<li>
+												<span>江苏</span>
+												<ul class="reset dn">
+													<li class="mr_on">南京</li>
+													<li>苏州</li>
+													<li>昆山</li>
+													<li>常熟</li>
+													<li>张家港</li>
+													<li>无锡</li>
+													<li>江阴</li>
+													<li>徐州</li>
+													<li>常州</li>
+													<li>南通</li>
+													<li>连云港</li>
+													<li>淮安</li>
+													<li>盐城</li>
+													<li>扬州</li>
+													<li>镇江</li>
+													<li>泰州</li>
+													<li>靖江</li>
+													<li>宿迁</li>
+													<li>太仓</li>
+												</ul>
+											</li>
+											<li>
+												<span>浙江</span>
+												<ul class="reset dn">
+													<li class="mr_on">杭州</li>
+													<li>宁波</li>
+													<li>温州</li>
+													<li>嘉兴</li>
+													<li>湖州</li>
+													<li>绍兴</li>
+													<li>金华</li>
+													<li>衢州</li>
+													<li>舟山</li>
+													<li>台州</li>
+													<li>丽水</li>
+													<li>玉环县</li>
+													<li>方家山</li>
+												</ul>
+											</li>
+											<li>
+												<span>安徽</span>
+												<ul class="reset dn">
+													<li class="mr_on">合肥</li>
+													<li>芜湖</li>
+													<li>蚌埠</li>
+													<li>淮南</li>
+													<li>马鞍山</li>
+													<li>淮北</li>
+													<li>铜陵</li>
+													<li>安庆</li>
+													<li>黄山</li>
+													<li>滁州</li>
+													<li>阜阳</li>
+													<li>宿州</li>
+													<li>巢湖</li>
+													<li>六安</li>
+													<li>亳州</li>
+													<li>池州</li>
+													<li>宣城</li>
+												</ul>
+											</li>
+											<li>
+												<span>福建</span>
+												<ul class="reset dn">
+													<li class="mr_on">福州</li>
+													<li>厦门</li>
+													<li>莆田</li>
+													<li>三明</li>
+													<li>泉州</li>
+													<li>泉港区</li>
+													<li>漳州</li>
+													<li>南平</li>
+													<li>龙岩</li>
+													<li>宁德</li>
+												</ul>
+											</li>
+											<li>
+												<span>江西</span>
+												<ul class="reset dn">
+													<li class="mr_on">南昌</li>
+													<li>景德镇</li>
+													<li>萍乡</li>
+													<li>九江</li>
+													<li>新余</li>
+													<li>鹰潭</li>
+													<li>赣州</li>
+													<li>吉安</li>
+													<li>宜春</li>
+													<li>抚州</li>
+													<li>上饶</li>
+												</ul>
+											</li>
+											<li>
+												<span>山东</span>
+												<ul class="reset dn">
+													<li class="mr_on">济南</li>
+													<li>青岛</li>
+													<li>淄博</li>
+													<li>枣庄</li>
+													<li>东营</li>
+													<li>烟台</li>
+													<li>潍坊</li>
+													<li>济宁</li>
+													<li>泰安</li>
+													<li>威海</li>
+													<li>日照</li>
+													<li>莱芜</li>
+													<li>临沂</li>
+													<li>德州</li>
+													<li>聊城</li>
+													<li>滨州</li>
+													<li>菏泽</li>
+													<li>章丘</li>
+													<li>荣成</li>
+												</ul>
+											</li>
+											<li>
+												<span>河南</span>
+												<ul class="reset dn">
+													<li class="mr_on">郑州</li>
+													<li>开封</li>
+													<li>洛阳</li>
+													<li>平顶山</li>
+													<li>安阳</li>
+													<li>鹤壁</li>
+													<li>新乡</li>
+													<li>焦作</li>
+													<li>濮阳</li>
+													<li>许昌</li>
+													<li>漯河</li>
+													<li>三门峡</li>
+													<li>南阳</li>
+													<li>商丘</li>
+													<li>信阳</li>
+													<li>周口</li>
+													<li>驻马店</li>
+												</ul>
+											</li>
+											<li>
+												<span>湖北</span>
+												<ul class="reset dn">
+													<li class="mr_on">武汉</li>
+													<li>黄石</li>
+													<li>十堰</li>
+													<li>宜昌</li>
+													<li>襄樊</li>
+													<li>鄂州</li>
+													<li>荆门</li>
+													<li>孝感</li>
+													<li>荆州</li>
+													<li>黄冈</li>
+													<li>咸宁</li>
+													<li>随州</li>
+													<li>恩施土家族苗族自治州</li>
+												</ul>
+											</li>
+											<li>
+												<span>湖南</span>
+												<ul class="reset dn">
+													<li class="mr_on">长沙</li>
+													<li>株洲</li>
+													<li>湘潭</li>
+													<li>衡阳</li>
+													<li>邵阳</li>
+													<li>岳阳</li>
+													<li>常德</li>
+													<li>张家界</li>
+													<li>益阳</li>
+													<li>郴州</li>
+													<li>永州</li>
+													<li>怀化</li>
+													<li>娄底</li>
+													<li>湘西土家族苗族自治州</li>
+												</ul>
+											</li>
+											<li>
+												<span>广东</span>
+												<ul class="reset dn">
+													<li class="mr_on">广州</li>
+													<li>深圳</li>
+													<li>韶关</li>
+													<li>珠海</li>
+													<li>汕头</li>
+													<li>佛山</li>
+													<li>南海区</li>
+													<li>江门</li>
+													<li>湛江</li>
+													<li>茂名</li>
+													<li>肇庆</li>
+													<li>惠州</li>
+													<li>梅州</li>
+													<li>汕尾</li>
+													<li>河源</li>
+													<li>阳江</li>
+													<li>清远</li>
+													<li>东莞</li>
+													<li>中山</li>
+													<li>潮州</li>
+													<li>揭阳</li>
+													<li>云浮</li>
+												</ul>
+											</li>
+											<li>
+												<span>广西</span>
+												<ul class="reset dn">
+													<li class="mr_on">南宁</li>
+													<li>柳州</li>
+													<li>桂林</li>
+													<li>梧州</li>
+													<li>北海</li>
+													<li>防城港</li>
+													<li>钦州</li>
+													<li>贵港</li>
+													<li>玉林</li>
+													<li>百色</li>
+													<li>贺州</li>
+													<li>河池</li>
+													<li>来宾</li>
+													<li>崇左</li>
+												</ul>
+											</li>
+											<li>
+												<span>海南</span>
+												<ul class="reset dn">
+													<li class="mr_on">海口</li>
+													<li>三亚</li>
+													<li>洋浦市</li>
+												</ul>
+											</li>
+											<li>
+												<span>四川</span>
+												<ul class="reset dn">
+													<li class="mr_on">成都</li>
+													<li>自贡</li>
+													<li>攀枝花</li>
+													<li>泸州</li>
+													<li>德阳</li>
+													<li>绵阳</li>
+													<li>广元</li>
+													<li>遂宁</li>
+													<li>内江</li>
+													<li>乐山</li>
+													<li>南充</li>
+													<li>眉山</li>
+													<li>宜宾</li>
+													<li>广安</li>
+													<li>达州</li>
+													<li>雅安</li>
+													<li>巴中</li>
+													<li>资阳</li>
+													<li>阿坝藏族羌族自治州</li>
+													<li>甘孜藏族自治州</li>
+													<li>凉山彝族自治州</li>
+												</ul>
+											</li>
+											<li>
+												<span>贵州</span>
+												<ul class="reset dn">
+													<li class="mr_on">贵阳</li>
+													<li>六盘水</li>
+													<li>遵义</li>
+													<li>安顺</li>
+													<li>铜仁地区</li>
+													<li>黔西南布依族苗族自治州</li>
+													<li>毕节地区</li>
+													<li>黔东南苗族侗族自治州</li>
+													<li>黔南布依族苗族自治州</li>
+												</ul>
+											</li>
+											<li>
+												<span>云南</span>
+												<ul class="reset dn">
+													<li class="mr_on">昆明</li>
+													<li>曲靖</li>
+													<li>玉溪</li>
+													<li>保山</li>
+													<li>昭通</li>
+													<li>楚雄彝族自治州</li>
+													<li>红河哈尼族彝族自治州</li>
+													<li>文山壮族苗族自治州</li>
+													<li>思茅</li>
+													<li>西双版纳傣族自治州</li>
+													<li>德宏傣族景颇族自治州</li>
+													<li>大理白族自治州</li>
+													<li>丽江</li>
+													<li>怒江傈僳族自治州</li>
+													<li>迪庆藏族自治州</li>
+													<li>临沧</li>
+												</ul>
+											</li>
+											<li>
+												<span>陕西</span>
+												<ul class="reset dn">
+													<li class="mr_on">西安</li>
+													<li>铜川</li>
+													<li>宝鸡</li>
+													<li>咸阳</li>
+													<li>渭南</li>
+													<li>延安</li>
+													<li>汉中</li>
+													<li>榆林</li>
+													<li>安康</li>
+													<li>商洛</li>
+												</ul>
+											</li>
+											<li>
+												<span>西藏</span>
+												<ul class="reset dn">
+													<li class="mr_on">拉萨</li>
+													<li>昌都</li>
+													<li>山南</li>
+													<li>日喀则</li>
+													<li>那曲</li>
+													<li>阿里</li>
+													<li>林芝</li>
+												</ul>
+											</li>
+											<li>
+												<span>甘肃</span>
+												<ul class="reset dn">
+													<li class="mr_on">兰州</li>
+													<li>嘉峪关</li>
+													<li>金昌</li>
+													<li>白银</li>
+													<li>天水</li>
+													<li>武威</li>
+													<li>张掖</li>
+													<li>平凉</li>
+													<li>酒泉</li>
+													<li>庆阳</li>
+													<li>定西</li>
+													<li>陇南</li>
+													<li>临夏回族自治州</li>
+													<li>甘南藏族自治州</li>
+												</ul>
+											</li>
+											<li>
+												<span>青海</span>
+												<ul class="reset dn">
+													<li class="mr_on">西宁</li>
+													<li>海晏</li>
+													<li>海东</li>
+													<li>海北</li>
+													<li>黄南</li>
+													<li>海南</li>
+													<li>果洛</li>
+													<li>玉树</li>
+													<li>海西</li>
+												</ul>
+											</li>
+											<li>
+												<span>宁夏</span>
+												<ul class="reset dn">
+													<li class="mr_on">银川</li>
+													<li>石嘴山</li>
+													<li>吴忠</li>
+													<li>固原</li>
+													<li>中卫</li>
+												</ul>
+											</li>
+											<li>
+												<span>新疆</span>
+												<ul class="reset dn">
+													<li class="mr_on">乌鲁木齐</li>
+													<li>石河子</li>
+													<li>克拉玛依</li>
+													<li>吐鲁番</li>
+													<li>哈密</li>
+													<li>昌吉</li>
+													<li>博乐</li>
+													<li>和田</li>
+													<li>阿克苏</li>
+													<li>阿勒</li>
+													<li>喀什</li>
+													<li>塔城</li>
+													<li>库尔勒</li>
+													<li>伊犁</li>
+													<li>克州</li>
+												</ul>
+											</li>
+											<li>
+												<span>香港</span>
+												<ul class="reset dn">
+													<li class="mr_on">香港</li>
+												</ul>
+											</li>
+											<li>
+												<span>澳门</span>
+												<ul class="reset dn">
+													<li class="mr_on">澳门</li>
+												</ul>
+											</li>
+											<li>
+												<span>台湾</span>
+												<ul class="reset dn">
+													<li class="mr_on">台湾</li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="mr_pay_div normal_s fl">
+								<i class="mr_sj"></i>
+								<input name="monthpay" class="mr_btn" type="button">
+								<div style="display: none;" class="xl_list dn">
+									<ul class="ul_pay">
+										<li>2k以下</li>
+										<li>2k-5k</li>
+										<li>5k-10k</li>
+										<li>10k-15k</li>
+										<li>15k-25k</li>
+										<li>25k-50k</li>
+										<li>50k以上</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<label>补充说明（若有）</label>
+						<div id="mr_job_mce" class="mr_click_flag mr_time_area wrap_editor">
+							<textarea aria-hidden="true" class="tinymce" style="width: 520px; height: 148px; display: none;" id="expJobDes" name="expJobDes">&lt;p&gt;&lt;br&gt;&lt;/p&gt;</textarea>
+							<span class="mceEditor defaultSkin" id="expJobDes_parent" aria-labelledby="expJobDes_voice" role="application">
+								<span id="expJobDes_voice" style="display:none;" class="mceVoiceLabel">富文本域</span>
+								<table style="width: 520px; height: 148px;" class="mceLayout" id="expJobDes_tbl" role="presentation" cellpadding="0" cellspacing="0">
+									<tbody>
+										<tr class="mceFirst" role="presentation">
+											<td role="toolbar" class="mceToolbar mceLeft mceFirst mceLast">
+												<div tabindex="-1" id="expJobDes_toolbargroup" role="group" aria-labelledby="expJobDes_toolbargroup_voice">
+													<span role="application">
+														<span id="expJobDes_toolbargroup_voice" class="mceVoiceLabel" style="display:none;">工具栏</span>
+														<table aria-pressed="false" aria-disabled="false" id="expJobDes_toolbar1" class="mceToolbar mceToolbarRow1 Enabled" role="presentation" tabindex="-1" cellpadding="0" cellspacing="0" align="">
+															<tbody>
+																<tr>
+																	<td class="mceToolbarStart mceToolbarStartButton mceFirst">
+																		<span>
+																			<!-- IE -->
+																		</span>
+																	</td>
+																	<td style="position: relative">
+																		<a aria-pressed="false" tabindex="-1" role="button" id="expJobDes_bullist" href="javascript:;" class="mceButton mceButtonEnabled mce_bullist" onmousedown="return false;" onclick="return false;" aria-labelledby="expJobDes_bullist_voice" title="项目列表">
+																			<span class="mceIcon mce_bullist"></span>
+																			<span class="mceVoiceLabel mceIconOnly" style="display: none;" id="expJobDes_bullist_voice">项目列表</span>
+																		</a>
+																	</td>
+																	<td style="position: relative">
+																		<a aria-pressed="false" tabindex="-1" role="button" id="expJobDes_numlist" href="javascript:;" class="mceButton mceButtonEnabled mce_numlist" onmousedown="return false;" onclick="return false;" aria-labelledby="expJobDes_numlist_voice" title="编号列表">
+																			<span class="mceIcon mce_numlist"></span>
+																			<span class="mceVoiceLabel mceIconOnly" style="display: none;" id="expJobDes_numlist_voice">编号列表</span>
+																		</a>
+																	</td>
+																	<td class="mceToolbarEnd mceToolbarEndButton mceLast">
+																		<span>
+																			<!-- IE -->
+																		</span>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</span>
+												</div>
+												<a href="#" accesskey="z" title="转到工具按钮 - Alt-Q，转到编辑器 - Alt-Z，转到元素路径 - Alt-X。" onfocus="tinyMCE.getInstanceById('expJobDes').focus();">
+													<!-- IE -->
+												</a>
+											</td>
+										</tr>
+										<tr class="mceLast">
+											<td class="mceIframeContainer mceFirst mceLast">
+												<iframe style="width: 100%; height: 125px; display: block;" title="富文本域按 ALT-F10 定位到工具栏.按 ALT-0 获取帮助。" allowtransparency="true" src='javascript:""' id="expJobDes_ifr" frameborder="0"></iframe>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</span>
+						</div>
+						<div class="mr_ope clearfixs">
+							<input class="mr_save" value="保存" type="submit">
+							<a href="javascript:;" class="mr_cancel">取消</a>
+						</div>
+					</div>
+				</form>
+				<div class="mr_empty_add dn">
+					<i></i>
+					<span>更新期望工作</span>
+				</div>
+				<div class="expectjob_list">
+					<input id="expHideId" value="" type="hidden">
+
+					<div class="mr_job_info" data-id="">
+						<ul class="clearfixs">
+							<li class="mr_name_li">
+								<i></i>
+								<span class="mr_job_name" title=""></span>
+							</li>
+							<li class="mr_jobtype_li">
+								<i></i>
+								<span class="mr_job_type" title=""></span>
+							</li>
+							<li class="mr_city_li">
+								<i></i>
+								<span class="mr_job_adr" title=""></span>
+							</li>
+							<li class="mr_jobrange_li">
+								<i></i>
+								<span class="mr_job_range" title=""></span>
+							</li>
+						</ul>
+					</div>
+					<div class="mr_job_des dn">
+						<i class="mr_job_t"></i>
+						<i class="mr_job_b"></i>
+						<div class="mr_expjob_content"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="skillsAssess" class="dn item_container_target">
+		<div>
+			<div class="mr_moudle_head clearfixs mr_w604">
+				<div class="mr_head_l">
+					<div class="mr_title">
+						<span class="mr_title_l"></span>
+						<span class="mr_title_c">技能评价</span>
+						<span class="mr_title_r"></span>
+					</div>
+				</div>
+				<div class="mr_head_r">
+					<i></i>
+					<em>编辑</em>
+				</div>
+			</div>
+			<div class="mr_moudle_content mr_w604">
+
+				<div class="mr_empty_add">
+					<i></i>
+					<span>展示我的技能</span>
+				</div>
+
+				<div class="me_skill_list"></div>
+
+				<div class="mr_skill_add mr_skill_add_button">
+					<span>添加一行</span>
+				</div>
+
+				<div class="mr_skill_add mr_skill_opera">
+					<div class="mr_ope clearfixs">
+						<span class="error" style="display:none;">error</span>
+						<input class="mr_save" value="保存" type="submit">
+						<a href="javascript:;" class="mr_cancel">取消</a>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="customBlock" class="dn item_container_target">
+		<div>
+			<div class="mr_moudle_head clearfixs mr_w604">
+				<div class="mr_head_l">
+					<div class="mr_title">
+						<span class="mr_line_tl"></span>
+						<div style="margin-left: 0px;" class="cust_title">
+							<span></span>
+						</div>
+					</div>
+				</div>
+				<div class="mr_head_r">
+					<i></i>
+					<em>编辑</em>
+				</div>
+			</div>
+			<div class="mr_moudle_content mr_w604">
+				<div class="mr_empty_add">
+					<i></i>
+					<span>DIY你的板块</span>
+				</div>
+				<form class="dn" id="upCustomForm">
+					<div class="mr_add_work">
+						<label>自定义标题</label>
+						<div class="clearfixs mr_input_div mr_click_flag mr_prolink">
+							<input class="mr_btn" id="titleName" name="titleName" autocomplete="off" type="text"></div>
+						<label>内容</label>
+						<div id="mr_job_mce" class="mr_click_flag mr_time_area wrap_editor">
+							<textarea aria-hidden="true" class="tinymce" style="width: 520px; height: 148px; display: none;" id="customCon" name="customCon">&lt;p&gt;&lt;br&gt;&lt;/p&gt;</textarea>
+							<span class="mceEditor defaultSkin" id="customCon_parent" aria-labelledby="customCon_voice" role="application">
+								<span id="customCon_voice" style="display:none;" class="mceVoiceLabel">富文本域</span>
+								<table style="width: 520px; height: 148px;" class="mceLayout" id="customCon_tbl" role="presentation" cellpadding="0" cellspacing="0">
+									<tbody>
+										<tr class="mceFirst" role="presentation">
+											<td role="toolbar" class="mceToolbar mceLeft mceFirst mceLast">
+												<div tabindex="-1" id="customCon_toolbargroup" role="group" aria-labelledby="customCon_toolbargroup_voice">
+													<span role="application">
+														<span id="customCon_toolbargroup_voice" class="mceVoiceLabel" style="display:none;">工具栏</span>
+														<table aria-pressed="false" aria-disabled="false" id="customCon_toolbar1" class="mceToolbar mceToolbarRow1 Enabled" role="presentation" tabindex="-1" cellpadding="0" cellspacing="0" align="">
+															<tbody>
+																<tr>
+																	<td class="mceToolbarStart mceToolbarStartButton mceFirst">
+																		<span>
+																			<!-- IE -->
+																		</span>
+																	</td>
+																	<td style="position: relative">
+																		<a aria-pressed="false" tabindex="-1" role="button" id="customCon_bullist" href="javascript:;" class="mceButton mceButtonEnabled mce_bullist" onmousedown="return false;" onclick="return false;" aria-labelledby="customCon_bullist_voice" title="项目列表">
+																			<span class="mceIcon mce_bullist"></span>
+																			<span class="mceVoiceLabel mceIconOnly" style="display: none;" id="customCon_bullist_voice">项目列表</span>
+																		</a>
+																	</td>
+																	<td style="position: relative">
+																		<a aria-pressed="false" tabindex="-1" role="button" id="customCon_numlist" href="javascript:;" class="mceButton mceButtonEnabled mce_numlist" onmousedown="return false;" onclick="return false;" aria-labelledby="customCon_numlist_voice" title="编号列表">
+																			<span class="mceIcon mce_numlist"></span>
+																			<span class="mceVoiceLabel mceIconOnly" style="display: none;" id="customCon_numlist_voice">编号列表</span>
+																		</a>
+																	</td>
+																	<td class="mceToolbarEnd mceToolbarEndButton mceLast">
+																		<span>
+																			<!-- IE -->
+																		</span>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</span>
+												</div>
+												<a href="#" accesskey="z" title="转到工具按钮 - Alt-Q，转到编辑器 - Alt-Z，转到元素路径 - Alt-X。" onfocus="tinyMCE.getInstanceById('customCon').focus();">
+													<!-- IE -->
+												</a>
+											</td>
+										</tr>
+										<tr class="mceLast">
+											<td class="mceIframeContainer mceFirst mceLast">
+												<iframe style="width: 100%; height: 125px; display: block;" title="富文本域按 ALT-F10 定位到工具栏.按 ALT-0 获取帮助。" allowtransparency="true" src='javascript:""' id="customCon_ifr" frameborder="0"></iframe>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</span>
+						</div>
+						<div class="mr_ope clearfixs">
+							<input class="mr_save" value="保存" type="submit">
+							<a href="javascript:;" class="mr_cancel">取消</a>
+						</div>
+					</div>
+				</form>
+				<div class="mr_content_cus"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="mr_self_state">
+		<div class="form_wrap mr_self_s active">
+			<input id="self_state" name="self_state" class="mr_button" value="我目前已离职，可快速到岗" type="button">
+			<i class="mr_sj"></i>
+			<div style="display: none;" class="xl_list dn">
+				<ul class="ul_self_state">
+					<li>我目前已离职，可快速到岗</li>
+					<li>我目前正在职，正考虑换个新环境</li>
+					<li>我暂时不想找工作</li>
+					<li>我是应届毕业生</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="mr_bottom clearfixs">
+	<div class="mr_bottom_l">
+		<div class="mr_down_tip dn">
+			<i></i>
+			<em></em>
+			<ul>
+				<li class="active">
+					<a href="http://www.lagou.com/resume/downloadResume?key=01b5bf28521c9e0ea90b5eb2e71a4ec0&amp;type=1" target="_blank">HTML</a>
+				</li>
+				<li>
+					<a href="http://www.lagou.com/resume/downloadResume?key=01b5bf28521c9e0ea90b5eb2e71a4ec0&amp;type=2" target="_blank">DOC</a>
+				</li>
+				<li>
+					<a href="http://www.lagou.com/resume/downloadResume?key=01b5bf28521c9e0ea90b5eb2e71a4ec0&amp;type=3" target="_blank">PDF</a>
+				</li>
+			</ul>
+		</div>
+		<div class="mr_down">
+			<span>
+				<i></i>
+				<em>把这份简历保存到本地</em>
+			</span>
+		</div>
+	</div>
+	<div class="mr_bottom_r">
+		<span>简历更新于</span>
+		<span class="upResumeTime">2015-05-24 20:02</span>
+	</div>
+</div>
+</div>
+<div class="mr_myresume_r">
+<div class="mr_r_nav">
+	<ul class="clearfixs">
+		<li>
+			<a href="http://www.lagou.com/mycenter/delivery.html" target="_blank">
+				投递箱
+				<i class="td"></i>
+			</a>
+			<!-- <a  href="http://www.lagou.com/mycenter/delivery.html" target="_blank">
+			我的投递
+			<i class="td"></i>
+			<em class="count2">99</em>
+		</a>
+		-->
+	</li>
+	<li>
+		<a href="http://www.lagou.com/mycenter/collections.html" target="_blank">
+			收藏夹
+			<i class="sc"></i>
+		</a>
+	</li>
+	<li>
+		<a href="http://www.lagou.com/s/subscribe.html" target="_blank">
+			订阅栏
+			<i class="dy"></i>
+		</a>
+	</li>
+	<li class="mr_none">
+		<a href="http://www.lagou.com/mycenter/invitation.html" target="_blank">
+			邀请函
+			<i class="yq"></i>
+		</a>
+	</li>
+</ul>
+</div>
+<div class="mr_upload">
+<i></i>
+<a class="inline cboxElement" href="#uploadFile" title="上传附件简历">我要上传附件简历</a>
+</div>
+
+<div class="mr_uploaded clearfixs dn">
+<a href="javascript:;" class="mr_del"></a>
+<div class="mr_up_main">
+	<a href="http://www.lagou.com/nearBy/downloadResume" title=""></a>
+	<p></p>
+</div>
+<div class="mr_set_default">
+	<div class="set_default_wrap">
+		<input id="default_resume" class="mr_button" value="默认投递：在线简历" type="button">
+		<span>
+			<i class="mr_sj"></i>
+		</span>
+		<div style="display: none;" class="xl_list dn">
+			<ul class="ul_resume_type">
+				<li data-type="1">默认投递：在线简历</li>
+				<li data-type="0">默认投递：附件简历</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+<div class="scroll_fix">
+<div class="mr_integrity">
+	<div class="mr_top clearfixs">
+		<span class="mr_tip_l">
+			<em class="mr_tip">简历完整度：</em>
+			<em class="mr_bfb">34%</em>
+		</span>
+		<a class="mr_tip_r" target="_blank" href="http://www.lagou.com/resume/preview.html">预览简历</a>
+	</div>
+	<div class="mr_integrity_m">
+		<div style="width: 85px;" class="mr_solid"></div>
+		<div style="width: 85px;" class="mr_dashed"></div>
+	</div>
+</div>
+<div class="mr_module">
+	<ul>
+		<li class="active md_flag" data-md="baseinfo">
+			<a class="clearfixs">
+				<i class="mr_base_i"></i>
+				<span class="mr_m_name">基本信息</span>
+			</a>
+		</li>
+		<li data-md="workExperience" class="md_flag">
+			<a class="clearfixs">
+				<span class="mr_require flag_work dn">必填</span>
+				<i class="mr_works_i"></i>
+				<span class="mr_m_name">工作经历</span>
+			</a>
+		</li>
+		<li data-md="educationalBackground" class="md_flag">
+			<a class="clearfixs">
+
+				<span class="mr_require flag_edu dn">必填</span>
+
+				<i class="mr_edu_i"></i>
+				<span class="mr_m_name">教育经历</span>
+			</a>
+		</li>
+		<li data-md="projectExperience" class="dn m_hide">
+			<a class="clearfixs">
+				<span class="mr_hide_del"></span>
+				<i class="mr_project_i"></i>
+				<span class="mr_m_name">项目经验</span>
+			</a>
+		</li>
+		<li data-md="worksShow" class="dn m_hide">
+			<a class="clearfixs">
+				<span class="mr_hide_del"></span>
+				<i class="mr_production_i"></i>
+				<span class="mr_m_name">作品展示</span>
+			</a>
+		</li>
+		<li data-md="selfDescription" class="dn m_hide">
+			<a class="clearfixs">
+				<span class="mr_hide_del"></span>
+				<i class="mr_self_i"></i>
+				<span class="mr_m_name">自我描述</span>
+			</a>
+		</li>
+		<li data-md="expectJob" class="dn m_hide">
+			<a class="clearfixs">
+				<span class="mr_hide_del"></span>
+				<i class="mr_hopework_i"></i>
+				<span class="mr_m_name">期望工作</span>
+			</a>
+		</li>
+		<li data-md="skillsAssess" class="dn m_hide">
+			<a class="clearfixs">
+				<span class="mr_hide_del"></span>
+				<i class="mr_skill_i"></i>
+				<span class="mr_m_name">技能评价</span>
+			</a>
+		</li>
+		<li data-md="customBlock" class="dn m_hide">
+			<a class="clearfixs">
+				<span class="mr_hide_del"></span>
+				<i class="mr_moudle_i"></i>
+				<span class="mr_m_name">自定义板块</span>
+			</a>
+		</li>
+		<li class="mr_module_add dn">
+			<a>
+				<span class="mr_hide_addic"></span>
+				<i class="mr_addmd_i"></i>
+				<span class="mr_m_name">添加板块</span>
+			</a>
+		</li>
+		<li data-md="projectExperience" class="hide_md">
+			<a class="clearfixs">
+				<span class="mr_hide_addic"></span>
+				<i class="mr_project_i"></i>
+				<span class="mr_m_name">项目经验</span>
+			</a>
+		</li>
+		<li data-md="worksShow" class="hide_md">
+			<a class="clearfixs">
+				<span class="mr_hide_addic"></span>
+				<i class="mr_production_i"></i>
+				<span class="mr_m_name">作品展示</span>
+			</a>
+		</li>
+		<li data-md="selfDescription" class="hide_md">
+			<a class="clearfixs">
+				<span class="mr_hide_addic"></span>
+				<i class="mr_self_i"></i>
+				<span class="mr_m_name">自我描述</span>
+			</a>
+		</li>
+		<li data-md="expectJob" class="hide_md">
+			<a class="clearfixs">
+				<span class="mr_hide_addic"></span>
+				<i class="mr_hopework_i"></i>
+				<span class="mr_m_name">期望工作</span>
+			</a>
+		</li>
+		<li data-md="skillsAssess" class="hide_md">
+			<a class="clearfixs">
+				<span class="mr_hide_addic"></span>
+				<i class="mr_skill_i"></i>
+				<span class="mr_m_name">技能评价</span>
+			</a>
+		</li>
+		<li data-md="customBlock" class="hide_md">
+			<a class="clearfixs">
+				<span class="mr_hide_addic"></span>
+				<i class="mr_moudle_i"></i>
+				<span class="mr_m_name">自定义板块</span>
+			</a>
+		</li>
+	</ul>
+</div>
+</div>
+<!--通过button 设置disable的思路控制按钮是否控制事件解绑与恢复
+			<input type="button" style="width:100px;height:20px;background-color: #000;" id="a"/>
+<input type="button" style="width:100px;height:20px;background-color: #999;" onclick="alert(2);" disabled="disabled" />
+-->
+</div>
+</div>
+<div id="sns_hide" style="display:none;">
+<div class="form_wrap mr_sns_m">
+<i class="sns8"></i>
+<em class="mr_no"></em>
+<a href="javascript:;" class="sns_del"></a>
+<input id="sns8" name="sns8" class="mr_button" type="text"></div>
+</div>
+
+<div id="job_update_hide" class="dn">
+<form class="jobExpForm" id="">
+<input id="mr_expid" value="" type="hidden">
+<div class="mr_add_work">
+<div class="mr_upload_logo">
+	<div>
+		<i></i>
+		<span>上传公司LOGO</span>
+	</div>
+	<input id="upcompanyLogo" name="companyLogo" onchange="myresumeCommon.utils.imageUpload(this,myresumeCommon.requestTargets.uploadLogo,uploadCompanyLogo.upSucc,uploadCompanyLogo.upFail);" title="目前仅支持10MB以内的PNG/JPG/JPEG/GIF图片" type="file">
+	<img src="" name="mr_company_logo" class="logo_u" alt="">
+	<input name="companyLogoHide" value="" type="hidden"></div>
+<label>公司</label>
+<div class="mr_input_div mr_click_flag">
+	<input class="mr_btn companyName" name="companyName"></div>
+<label>职位</label>
+<div class="mr_input_div mr_click_flag">
+	<input class="mr_btn autoPosition" name="positionName"></div>
+<label>在职时间</label>
+<div class="clearfixs mr_time_area">
+	<div class="mr_timed_div mr_sta_time fl">
+		<i class="mr_sj"></i>
+		<input class="mr_btn" type="button">
+		<input name="startTime" type="hidden">
+		<div class="mr_calendar_ym clearfixs dn">
+			<ul class="mr_year">
+				<li>2015</li>
+				<li>2014</li>
+				<li>2013</li>
+				<li>2012</li>
+				<li>2011</li>
+				<li>2010</li>
+				<li>2009</li>
+				<li>2008</li>
+				<li>2007</li>
+				<li>2006</li>
+				<li>2005</li>
+				<li>2004</li>
+				<li>2003</li>
+				<li>2002</li>
+				<li>2001</li>
+				<li>2000</li>
+				<li>1999</li>
+				<li>1998</li>
+				<li>1997</li>
+				<li>1996</li>
+				<li>1995</li>
+				<li>1994</li>
+				<li>1993</li>
+				<li>1992</li>
+				<li>1991</li>
+				<li>1990</li>
+				<li>1989</li>
+			</ul>
+			<ul class="mr_month clearfixs">
+				<li>
+					<span>1月</span>
+				</li>
+				<li>
+					<span>2月</span>
+				</li>
+				<li class="mr0">
+					<span>3月</span>
+				</li>
+				<li>
+					<span>4月</span>
+				</li>
+				<li>
+					<span>5月</span>
+				</li>
+				<li class="mr0">
+					<span>6月</span>
+				</li>
+				<li>
+					<span>7月</span>
+				</li>
+				<li>
+					<span>8月</span>
+				</li>
+				<li class="mr0">
+					<span>9月</span>
+				</li>
+				<li class="mb0">
+					<span>10月</span>
+				</li>
+				<li class="mb0">
+					<span>11月</span>
+				</li>
+				<li class="mr0 mb0">
+					<span>12月</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="mr_timed_div mr_end_time fl">
+		<i class="mr_sj"></i>
+		<input class="mr_btn" type="button">
+		<input name="endTime" type="hidden">
+		<div class="mr_calendar_ym clearfixs dn">
+			<ul class="mr_year">
+				<li>2015</li>
+				<li>2014</li>
+				<li>2013</li>
+				<li>2012</li>
+				<li>2011</li>
+				<li>2010</li>
+				<li>2009</li>
+				<li>2008</li>
+				<li>2007</li>
+				<li>2006</li>
+				<li>2005</li>
+				<li>2004</li>
+				<li>2003</li>
+				<li>2002</li>
+				<li>2001</li>
+				<li>2000</li>
+				<li>1999</li>
+				<li>1998</li>
+				<li>1997</li>
+				<li>1996</li>
+				<li>1995</li>
+				<li>1994</li>
+				<li>1993</li>
+				<li>1992</li>
+				<li>1991</li>
+				<li>1990</li>
+				<li>1989</li>
+			</ul>
+			<ul class="mr_month clearfixs">
+				<li>
+					<span>1月</span>
+				</li>
+				<li>
+					<span>2月</span>
+				</li>
+				<li class="mr0">
+					<span>3月</span>
+				</li>
+				<li>
+					<span>4月</span>
+				</li>
+				<li>
+					<span>5月</span>
+				</li>
+				<li class="mr0">
+					<span>6月</span>
+				</li>
+				<li>
+					<span>7月</span>
+				</li>
+				<li>
+					<span>8月</span>
+				</li>
+				<li class="mr0">
+					<span>9月</span>
+				</li>
+				<li class="mb0">
+					<span>10月</span>
+				</li>
+				<li class="mb0">
+					<span>11月</span>
+				</li>
+				<li class="mr0 mb0">
+					<span>12月</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<label>工作内容</label>
+<div id="mr_job_mce" class="mr_click_flag wrap_editor">
+	<textarea class="tinymce_replace" style="width:520px;height:148px;" id="mce_jason" name="jobContent"></textarea>
+</div>
+<div class="mr_ope clearfixs">
+	<div class="mr_delete">
+		<div class="mr_delete_pop dn">
+			<p>确定删除本条信息？</p>
+			<div>
+				<span data-id="" class="mr_del_ok">删除</span>
+				<span class="mr_del_cancel">取消</span>
+			</div>
+		</div>
+		<span>删除本条</span>
+	</div>
+	<input class="mr_save" value="保存" type="submit">
+	<a href="javascript:;" class="mr_cancel">取消</a>
+</div>
+</div>
+</form>
+</div>
+<!--教育经历修改框  -->
+<div id="edu_update_hide" class="dn">
+<form class="eduExpForm" id="">
+<input id="eduId" name="eduId" value="" type="hidden">
+<div class="mr_add_work">
+<label>学校名称</label>
+<div class="mr_input_div mr_click_flag">
+	<input class="mr_btn" name="schoolName" type="text"></div>
+<label>所学专业</label>
+<div class="mr_input_div mr_click_flag">
+	<input class="mr_btn" name="positionName" type="text"></div>
+<label>
+	<span>学历</span>
+	<span class="label_by_y">毕业年份</span>
+</label>
+<div class="clearfixs mr_time_area">
+	<div class="mr_timed_div normal_s mr_sta_time fl">
+		<i class="mr_sj"></i>
+		<input name="degree_text" type="hidden">
+		<input class="mr_btn" name="degree_val" type="button">
+		<div style="display: none;" class="xl_list dn">
+			<ul class="ul_edubg">
+				<li>大专</li>
+				<li>本科</li>
+				<li>硕士</li>
+				<li>博士</li>
+				<li>其他</li>
+			</ul>
+		</div>
+	</div>
+	<div class="mr_timed_div normal_s fl">
+		<i class="mr_sj"></i>
+		<input name="graduate_text" type="hidden">
+		<input class="mr_btn" onchange="validateChange(this);" name="graduate" type="button">
+		<div style="display: none;" class="xl_list dn">
+			<ul class="ul_eduy">
+				<li>2017</li>
+				<li>2016</li>
+				<li>2015</li>
+				<li>2014</li>
+				<li>2013</li>
+				<li>2012</li>
+				<li>2011</li>
+				<li>2010</li>
+				<li>2009</li>
+				<li>2008</li>
+				<li>2007</li>
+				<li>2006</li>
+				<li>2005</li>
+				<li>2004</li>
+				<li>2003</li>
+				<li>2002</li>
+				<li>2001</li>
+				<li>2000</li>
+				<li>1999</li>
+				<li>1998</li>
+				<li>1997</li>
+				<li>1996</li>
+				<li>1995</li>
+				<li>1994</li>
+				<li>1993</li>
+				<li>1992</li>
+				<li>1991</li>
+				<li>1990</li>
+				<li>1989</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="mr_ope clearfixs">
+	<div class="mr_delete">
+		<div class="mr_delete_pop dn">
+			<p>确定删除本条信息？</p>
+			<div>
+				<span data-id="" class="mr_del_ok">删除</span>
+				<span class="mr_del_cancel">取消</span>
+			</div>
+		</div>
+		<span>删除本条</span>
+	</div>
+	<input class="mr_save" value="保存" type="submit">
+	<a href="javascript:;" class="mr_cancel">取消</a>
+</div>
+</div>
+</form>
+
+</div>
+<!-- 项目经验 -->
+<div id="pro_update_hide" class="dn">
+<form class="proExpForm" id="">
+<!--upProForm js赋值  -->
+<div class="mr_add_work">
+<label>项目名称</label>
+<div class="mr_input_div mr_click_flag">
+	<input class="mr_btn" id="projectName" name="projectName"></div>
+<label>你的职责</label>
+<div class="mr_input_div mr_click_flag">
+	<input class="mr_btn" id="thePost" name="thePost"></div>
+<label>项目起止时间</label>
+<div class="clearfixs mr_time_area">
+	<div class="mr_timed_div mr_sta_time fl">
+		<i class="mr_sj"></i>
+		<input class="mr_btn" type="button">
+		<input name="startTime" type="hidden">
+		<div class="mr_calendar_ym clearfixs dn">
+			<ul class="mr_year">
+				<li>2015</li>
+				<li>2014</li>
+				<li>2013</li>
+				<li>2012</li>
+				<li>2011</li>
+				<li>2010</li>
+				<li>2009</li>
+				<li>2008</li>
+				<li>2007</li>
+				<li>2006</li>
+				<li>2005</li>
+				<li>2004</li>
+				<li>2003</li>
+				<li>2002</li>
+				<li>2001</li>
+				<li>2000</li>
+				<li>1999</li>
+				<li>1998</li>
+				<li>1997</li>
+				<li>1996</li>
+				<li>1995</li>
+				<li>1994</li>
+				<li>1993</li>
+				<li>1992</li>
+				<li>1991</li>
+				<li>1990</li>
+				<li>1989</li>
+			</ul>
+			<ul class="mr_month clearfixs">
+				<li>
+					<span>1月</span>
+				</li>
+				<li>
+					<span>2月</span>
+				</li>
+				<li class="mr0">
+					<span>3月</span>
+				</li>
+				<li>
+					<span>4月</span>
+				</li>
+				<li>
+					<span>5月</span>
+				</li>
+				<li class="mr0">
+					<span>6月</span>
+				</li>
+				<li>
+					<span>7月</span>
+				</li>
+				<li>
+					<span>8月</span>
+				</li>
+				<li class="mr0">
+					<span>9月</span>
+				</li>
+				<li class="mb0">
+					<span>10月</span>
+				</li>
+				<li class="mb0">
+					<span>11月</span>
+				</li>
+				<li class="mr0 mb0">
+					<span>12月</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="mr_timed_div fl">
+		<i class="mr_sj"></i>
+		<input class="mr_btn" type="button">
+		<input name="endTime" type="hidden">
+		<div class="mr_calendar_ym clearfixs dn">
+			<ul class="mr_year">
+				<li>2015</li>
+				<li>2014</li>
+				<li>2013</li>
+				<li>2012</li>
+				<li>2011</li>
+				<li>2010</li>
+				<li>2009</li>
+				<li>2008</li>
+				<li>2007</li>
+				<li>2006</li>
+				<li>2005</li>
+				<li>2004</li>
+				<li>2003</li>
+				<li>2002</li>
+				<li>2001</li>
+				<li>2000</li>
+				<li>1999</li>
+				<li>1998</li>
+				<li>1997</li>
+				<li>1996</li>
+				<li>1995</li>
+				<li>1994</li>
+				<li>1993</li>
+				<li>1992</li>
+				<li>1991</li>
+				<li>1990</li>
+				<li>1989</li>
+			</ul>
+			<ul class="mr_month clearfixs">
+				<li>
+					<span>1月</span>
+				</li>
+				<li>
+					<span>2月</span>
+				</li>
+				<li class="mr0">
+					<span>3月</span>
+				</li>
+				<li>
+					<span>4月</span>
+				</li>
+				<li>
+					<span>5月</span>
+				</li>
+				<li class="mr0">
+					<span>6月</span>
+				</li>
+				<li>
+					<span>7月</span>
+				</li>
+				<li>
+					<span>8月</span>
+				</li>
+				<li class="mr0">
+					<span>9月</span>
+				</li>
+				<li class="mb0">
+					<span>10月</span>
+				</li>
+				<li class="mb0">
+					<span>11月</span>
+				</li>
+				<li class="mr0 mb0">
+					<span>12月</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<label>项目描述</label>
+<div id="mr_job_mce" class="mr_click_flag mr_time_area wrap_editor">
+	<textarea class="tinymce_replace" style="width:520px;height:148px;" id="mce_jason" name="mce_jason"></textarea>
+</div>
+<label>项目链接（若有）</label>
+<div class="mr_input_div mr_click_flag mr_prolink">
+	<input class="mr_btn" id="yourDuty" name="pro_link"></div>
+<div class="mr_ope clearfixs">
+	<div class="mr_delete">
+		<div class="mr_delete_pop dn">
+			<p>确定删除本条信息？</p>
+			<div>
+				<span class="mr_del_ok">删除</span>
+				<span class="mr_del_cancel">取消</span>
+			</div>
+		</div>
+		<span>删除本条</span>
+	</div>
+	<input class="mr_save" value="保存" type="submit">
+	<a href="javascript:;" class="mr_cancel">取消</a>
+</div>
+</div>
+</form>
+</div>
+<div id="del_hide_tip" class="dn">
+<div class="mr_md_del">
+<div class="mr_tip_div">
+<span class="mr_ic">?</span>
+<span class="mr_del_tip">确定删除本条信息？</span>
+</div>
+<p>
+删除后，该模块将不在简历中出现；
+<br>同时，该模块内已经填写的信息将被删除</p>
+<div class="mr_btn_area">
+<span class="mr_del_btn">删除</span>
+<span class="mr_del_cel">取消</span>
+</div>
+</div>
+</div>
+<!-- 作品展示 -->
+<!-- 上传图片的form -->
+<form class="add_worksshow_form dn" id="addWorksShowUploadFormUpdate">
+<div class="mr_add_work mr_addwork_online">
+<div class="mr_worksshow_tab">
+<span class="mr_wst_upimage selected">上传图片</span>
+<span class="mr_wst_uponline disabled">在线作品</span>
+</div>
+<!-- 图片上传区域 -->
+<div class="mr_worksshow_upimage">
+<div>
+	<i></i>
+	<span>上传作品图片</span>
+</div>
+<!--
+			<input type="hidden" name="workPicHidden" class="work-pic-hidden" />
+-->
+<input class="worksshow_up" id="worksshowUpUpdate" name="workPic" title="目前仅支持10MB以内的PNG/JPG/JPEG/GIF图片" onchange="myresumeCommon.utils.imageUpload( this, myresumeCommon.requestTargets.workUpload, worksShowOperator.addUploadSucc, worksShowOperator.addUploadFail );" type="file">
+<img id="worksshowUpUpdateShow" src="" alt="" class="worksshow_img"></div>
+<label>作品标题</label>
+<div class="mr_input_div mr_click_flag">
+<input class="mr_btn" id="workUploadTitleUpdate" name="workTitle"></div>
+<label>作品描述</label>
+<div id="workImagesDescUpdate" class="mr_click_flag wrap_editor">
+<textarea class="tinymce-update" id="workImagesDescContentUpdate" name="workDescribe" style="width:520px;height:148px;"></textarea>
+</div>
+<div class="mr_ope clearfixs">
+<div class="mr_delete">
+	<div class="mr_delete_pop dn">
+		<p>确定删除本条信息？</p>
+		<div>
+			<span class="mr_del_ok">删除</span>
+			<span class="mr_del_cancel">取消</span>
+		</div>
+	</div>
+	<span>删除本条</span>
+</div>
+<input class="mr_save" value="保存" type="submit">
+<a href="javascript:;" class="mr_cancel">取消</a>
+</div>
+</div>
+</form>
+<!-- 新增在线作品的foram -->
+<form class="add_worksshow_form dn" id="addWorksShowOnlineFormUpdate">
+<div class="mr_add_work mr_addwork_image">
+<div class="mr_worksshow_tab">
+<span class="mr_wst_upimage disabled">上传图片</span>
+<span class="mr_wst_uponline selected">在线作品</span>
+</div>
+<div class="mr_wo_show">
+<div class="mr_self_site">
+	<div class="mr_self_sitelink"></div>
+</div>
+<div class="mr_wo_preview"></div>
+</div>
+<label>作品地址</label>
+<div class="mr_input_div mr_click_flag">
+<input class="mr_btn" id="workOnlineUrlUpdate" name="url"></div>
+<label>作品描述</label>
+<div id="workOnlineDescUpdate" class="mr_click_flag wrap_editor">
+<textarea class="tinymce-update" id="workOnlineDescContentUpdate" name="workDescribeOnline" style="width:520px;height:148px;"></textarea>
+</div>
+<div class="mr_ope clearfixs">
+<div class="mr_delete">
+	<div class="mr_delete_pop dn">
+		<p>确定删除本条信息？</p>
+		<div>
+			<span class="mr_del_ok">删除</span>
+			<span class="mr_del_cancel">取消</span>
+		</div>
+	</div>
+	<span>删除本条</span>
+</div>
+<input class="mr_save" value="保存" type="submit">
+<a href="javascript:;" class="mr_cancel">取消</a>
+</div>
+</div>
+</form>
+<div id="del_hide_tip" class="dn">
+<div class="mr_md_del">
+<div class="mr_tip_div">
+<span class="mr_ic">?</span>
+<span class="mr_del_tip">确定删除本条信息？</span>
+</div>
+<p>
+删除后，该模块将不在简历中出现；
+<br>同时，该模块内已经填写的信息将被删除</p>
+<div class="mr_btn_area">
+<span class="mr_del_btn">删除</span>
+<span class="mr_del_cel">取消</span>
+</div>
+</div>
+</div>
+
+<div style="display:none">
+<div class="popup" id="cropimageContainer" style="overflow:hidden;width:360px;height:470px;">
+<div id="">
+<div class="crop">
+	<div id="cropzoom_container" style="overflow:hidden;"></div>
+	<div class="page_btn">
+		<input class="btn" id="cropimageEnsure" value="确定" type="button">
+		<input class="cancel" id="cropimageRestore" value="取消" type="button"></div>
+	<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+<div style="display:none">
+<div class="popup" id="uploadImages" style="overflow:hidden;width:360px;height:470px;">
+<div class="crop">
+<div id="cropzoom_container" style="overflow:hidden;"></div>
+<div class="page_btn">
+	<input class="btn" id="crop" value="确定" type="button">
+	<input class="cancel" id="restore" value="取消" type="button"></div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+<div style="display:none">
+<div class="popup" id="uploadLogos" style="overflow:hidden;width:360px;height:470px;">
+<div class="crop">
+<div id="cropzoom_container" style="overflow:hidden;"></div>
+<div class="page_btn">
+	<input class="btn" id="crop" value="确定" type="button">
+	<input class="cancel" id="restore" value="取消" type="button"></div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+<!-------------------------------------弹窗lightbox ----------------------------------------->
+<div style="display:none;">
+<!-- 上传简历 -->
+<div id="uploadFile" class="popup">
+<table width="100%">
+<tbody>
+	<tr>
+		<td align="center">
+			<form>
+				<a href="javascript:void(0);" class="btn_addPic">
+					<span>选择上传文件</span>
+					<input tabindex="3" title="支持word、pdf、ppt、txt、wps格式文件，大小不超过10M" size="3" name="newResume" id="resumeUpload" class="filePrew" onchange="file_check(this,'http://www.lagou.com/nearBy/updateMyResume.json','resumeUpload')" type="file"></a>
+			</form>
+		</td>
+	</tr>
+	<tr>
+		<td align="left">
+			支持word、pdf、ppt、txt、wps格式文件
+			<br>文件大小需小于10M</td>
+	</tr>
+	<tr>
+		<td style="color:#dd4a38; padding-top:10px;" align="left">注：若从其它网站下载的word简历，请将文件另存为.docx格式后上传</td>
+	</tr>
+	<tr>
+		<td align="center">
+			<img src="%E6%B3%A8%E5%86%8C%E5%AE%8C%E6%88%90%E8%B7%B3%E8%BD%AC%E8%87%B3%E6%88%91%E7%9A%84%E7%AE%80%E5%8E%86%E9%A6%96%E9%A1%B5_files/loading.gif" id="loadingImg" style="visibility: hidden;" alt="loading" height="16" width="55"></td>
+	</tr>
+</tbody>
+</table>
+</div>
+<!--/#uploadFile-->
+
+<!-- 简历上传成功 -->
+<div id="uploadFileSuccess" class="popup">
+<h4>简历上传成功！</h4>
+<table width="100%">
+<tbody>
+	<tr>
+		<td align="center">
+			<p>你可以将简历投给你中意的公司了。</p>
+		</td>
+	</tr>
+	<tr>
+		<td align="center">
+			<a href="javascript:;" class="btn_s">确&nbsp;定</a>
+		</td>
+	</tr>
+</tbody>
+</table>
+</div>
+<!--/#uploadFileSuccess-->
+
+<!-- 没有简历请上传 -->
+<div id="deliverResumesNo" class="popup">
+<table width="100%">
+<tbody>
+	<tr>
+		<td align="center">
+			<p class="font_16">你在拉勾还没有简历，请先上传一份</p>
+		</td>
+	</tr>
+	<tr>
+		<td align="center">
+			<form>
+				<a href="javascript:void(0);" class="btn_addPic">
+					<span>选择上传文件</span>
+					<input title="支持word、pdf、ppt、txt、wps格式文件，大小不超过10M" size="3" name="newResume" id="resumeUpload1" class="filePrew" onchange="file_check(this,'http://www.lagou.com/nearBy/updateMyResume.json','resumeUpload1')" type="file"></a>
+			</form>
+		</td>
+	</tr>
+	<tr>
+		<td align="center">支持word、pdf、ppt、txt、wps格式文件，大小不超过10M</td>
+	</tr>
+</tbody>
+</table>
+</div>
+<!--/#deliverResumesNo-->
+
+<!-- 上传附件简历操作说明-重新上传 -->
+<div id="fileResumeUpload" class="popup">
+<table width="100%">
+<tbody>
+	<tr>
+		<td>
+			<div class="f18 mb10">请上传标准格式的word简历</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="f16">
+				操作说明：
+				<br>打开需要上传的文件 - 点击文件另存为 - 选择.docx - 保存</div>
+		</td>
+	</tr>
+	<tr>
+		<td align="center">
+			<a class="inline btn cboxElement" href="#uploadFile" title="上传附件简历">重新上传</a>
+		</td>
+	</tr>
+</tbody>
+</table>
+</div>
+<!--/#fileResumeUpload-->
+
+<!-- 上传附件简历操作说明-重新上传 -->
+<div id="fileResumeUploadSize" class="popup">
+<table width="100%">
+<tbody>
+	<tr>
+		<td>
+			<div class="f18 mb10">上传文件大小超出限制</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="f16">
+				提示：
+				<br>单个附件不能超过10M，请重新选择附件简历！</div>
+		</td>
+	</tr>
+	<tr>
+		<td align="center">
+			<a class="inline btn cboxElement" href="#uploadFile" title="上传附件简历">重新上传</a>
+		</td>
+	</tr>
+</tbody>
+</table>
+</div>
+<!--/#deliverResumeConfirm-->
+
+</div>
+<!------------------------------------- end ----------------------------------------->
+<script type="text/javascript" src="%E6%B3%A8%E5%86%8C%E5%AE%8C%E6%88%90%E8%B7%B3%E8%BD%AC%E8%87%B3%E6%88%91%E7%9A%84%E7%AE%80%E5%8E%86%E9%A6%96%E9%A1%B5_files/jquery_003.js"></script>
+<script>
+// 设置全局变量
+window.globals =  {
+	resumeId: '1613142',
+	initRatio: '34',
+	token: '2069afd976e24671ae689cfe26bd0313',
+	refreshTime: '2015-05-24 20:02',
+	skillScore: '18',
+	projectExperienceScore: '18',
+	workShowScore: '14',
+	expectJobsScore: '10',
+	myRemarkScore: '9',
+	hasProjectExperiences: false,
+	hasWorkShows: false,
+	hasSelf: false,
+	hasExpectJobs: false,
+	hasSkillEvaluates: false,
+	hasUserDefines: false,
+	personIdFlag:'',
+	qrImgSrc:'http://www.lagou.com/qr/qrcode.jpg?qrSource=myResume',
+	isOpenResume:'3',
+	isFirstOpen:true
+};
+</script>
+<script type="text/javascript" src="%E6%B3%A8%E5%86%8C%E5%AE%8C%E6%88%90%E8%B7%B3%E8%BD%AC%E8%87%B3%E6%88%91%E7%9A%84%E7%AE%80%E5%8E%86%E9%A6%96%E9%A1%B5_files/common.js"></script>
+<script type="text/javascript" src="%E6%B3%A8%E5%86%8C%E5%AE%8C%E6%88%90%E8%B7%B3%E8%BD%AC%E8%87%B3%E6%88%91%E7%9A%84%E7%AE%80%E5%8E%86%E9%A6%96%E9%A1%B5_files/json.js"></script>
+<script type="text/javascript" src="%E6%B3%A8%E5%86%8C%E5%AE%8C%E6%88%90%E8%B7%B3%E8%BD%AC%E8%87%B3%E6%88%91%E7%9A%84%E7%AE%80%E5%8E%86%E9%A6%96%E9%A1%B5_files/jquery-migrate-1.js"></script>
+<script type="text/javascript" src="%E6%B3%A8%E5%86%8C%E5%AE%8C%E6%88%90%E8%B7%B3%E8%BD%AC%E8%87%B3%E6%88%91%E7%9A%84%E7%AE%80%E5%8E%86%E9%A6%96%E9%A1%B5_files/jquery-ui-1.js"></script>
+<script type="text/javascript" src="%E6%B3%A8%E5%86%8C%E5%AE%8C%E6%88%90%E8%B7%B3%E8%BD%AC%E8%87%B3%E6%88%91%E7%9A%84%E7%AE%80%E5%8E%86%E9%A6%96%E9%A1%B5_files/jquery_004.js"></script>
+<script type="text/javascript" src="%E6%B3%A8%E5%86%8C%E5%AE%8C%E6%88%90%E8%B7%B3%E8%BD%AC%E8%87%B3%E6%88%91%E7%9A%84%E7%AE%80%E5%8E%86%E9%A6%96%E9%A1%B5_files/components.js"></script>
+<script type="text/javascript" src="%E6%B3%A8%E5%86%8C%E5%AE%8C%E6%88%90%E8%B7%B3%E8%BD%AC%E8%87%B3%E6%88%91%E7%9A%84%E7%AE%80%E5%8E%86%E9%A6%96%E9%A1%B5_files/new_myresume.js"></script>
+<!------------------------------------- end ----------------------------------------->
+<div class="clear"></div>
+<input id="resubmitToken" value="2069afd976e24671ae689cfe26bd0313" type="hidden">
+<a id="backtop" title="回到顶部" rel="nofollow"></a>
+<!--product feedback-->
+<!--我要反馈按钮-->
+<div id="product-fk">
+<div id="feedback-icon">
+<div class="fb-icon"></div>
+<span>我要反馈</span>
+<em class="error dn fk-limit">
+今天已经反馈足够多了，给产品经理点时间消化下吧~
+<i></i>
+</em>
+<em class="error dn fk-suc">&nbsp;&nbsp;反馈提交成功！</em>
+</div>
+</div>
+
+<div id="feedback-con">
+<div class="pfb-pho-close">
+<div class="pfb-pho"></div>
+<div class="pfb-close"></div>
+</div>
+<em class="error dn">
+<span>你还没填任何反馈呢</span>
+<i></i>
+</em>
+<form id="product-fb">
+<div class="pfb-txt">
+<textarea placeholder="我是拉勾的产品经理哈丁，把你遇到的问题，或是想要的功能告诉我吧（200字以内）" maxlength="200"></textarea>
+</div>
+<div class="pfb-email" style="height:60px;">
+<input name="email" placeholder="留下邮箱方便我们沟通（选填）" type="text">
+<span class="ensure">确定</span>
+</div>
+</form>
+</div>
+<script>
+	// 关闭
+	//3s tips消失
+	var global = {}
+	global.email = "yu_shuangxiang@sina.com";
+	global.usertoken = $.cookie('user_trace_token');
+</script>
+</div>
+<!-- end #container -->
+</div>
+<!-- end #body -->
+<div id="footer">
+<div class="wrapper">
+<a href="http://www.lagou.com/qa.html?t=1" target="_blank" rel="nofollow">帮助中心</a>
+<a href="http://www.lagou.com/about.html" target="_blank" rel="nofollow">联系我们</a>
+<a href="http://e.weibo.com/lagou720" target="_blank" rel="nofollow">拉勾微博</a>
+<a class="footer_qr" href="javascript:void(0)" rel="nofollow">
+拉勾微信
+<i></i>
+</a>
+<div class="copyright">
+<span>©2015 Lagou</span>
+<a target="_blank" href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action" rel="nofollow">京ICP备14023790号-2</a>
+<span>京公网安备11010802017116号</span>
+</div>
+</div>
+</div>
+
+<script type="text/javascript" src="%E6%B3%A8%E5%86%8C%E5%AE%8C%E6%88%90%E8%B7%B3%E8%BD%AC%E8%87%B3%E6%88%91%E7%9A%84%E7%AE%80%E5%8E%86%E9%A6%96%E9%A1%B5_files/core.js"></script>
+<script type="text/javascript" src="%E6%B3%A8%E5%86%8C%E5%AE%8C%E6%88%90%E8%B7%B3%E8%BD%AC%E8%87%B3%E6%88%91%E7%9A%84%E7%AE%80%E5%8E%86%E9%A6%96%E9%A1%B5_files/popup.js"></script>
+<script type="text/javascript" src="%E6%B3%A8%E5%86%8C%E5%AE%8C%E6%88%90%E8%B7%B3%E8%BD%AC%E8%87%B3%E6%88%91%E7%9A%84%E7%AE%80%E5%8E%86%E9%A6%96%E9%A1%B5_files/tongji.js"></script>
+<script type="text/javascript" src="%E6%B3%A8%E5%86%8C%E5%AE%8C%E6%88%90%E8%B7%B3%E8%BD%AC%E8%87%B3%E6%88%91%E7%9A%84%E7%AE%80%E5%8E%86%E9%A6%96%E9%A1%B5_files/analytics_002.js"></script>
+<script src="%E6%B3%A8%E5%86%8C%E5%AE%8C%E6%88%90%E8%B7%B3%E8%BD%AC%E8%87%B3%E6%88%91%E7%9A%84%E7%AE%80%E5%8E%86%E9%A6%96%E9%A1%B5_files/h.js" type="text/javascript"></script>
+<!--copy账号系统的passport.html-->
+<script type="text/javascript">
+	function noticeInit(){
+        var userId = "1728587";
+        var urls = {
+            //调用B端简历管理nav的数字
+            queryTipsNums : "http://hr.lagou.com/recruitment/queryTipsNums.json",
+            //调用B端简历管理Notice Tip
+            queryNotice : "http://hr.lagou.com/notice/queryNotice.json",
+            //调用C端用户的notice数字
+            getPushNoticeOfC : "http://www.lagou.com/common/getPushNoticeOfC.json",
+            //清空C端用户的notice
+            clearPushNoticeOfC : "http://www.lagou.com/common/clearPushNoticeOfC.json",
+            //清空B端用户的notice
+            clearAll : "http://hr.lagou.com/notice/clearAll.json"
+        }
+        
+             
+        //调用C端用户的notice数字
+        PASSPORT.util.rpc({
+            params:{},
+            url: urls.getPushNoticeOfC,
+            succ:function(data){
+                var result = data.content.data;
+                if(data.state == "1"){
+                    var headerNoticeObj = $('#header .wrapper');
+                    var noticeDotObj = $("#noticeDot");
+                    var noticePopTip = ['<div id="noticeTip">','<span class="bot"></span>','<span class="top"></span>','<a href="javascript:;" class="closeNT"></a>'];
+                    
+                    //推送投递反馈数
+                    if(result.isShowPushNotice){
+                        var counters = result.pushNoticeEntity.statusList;
+                        if(counters && counters[0] >= 0 ){
+                            noticePopTip.push('<a href="http://www.lagou.com/mycenter/delivery.html?tag=0&r=0"  class="notice_tip" target="_blank"><strong>'+counters[0]+'</strong>条新投递反馈</a>');
+
+                            //下拉菜单中我投递的职位number
+                            $('#noticeNo').attr("href","http://www.lagou.com/mycenter/delivery.html?tag=0&r=0")
+                            .children("span").html("("+counters[0]+")").show();
+                        }
+                    }
+                    
+                    //推送plus邀约
+                    if(result.isShowPlusTips){
+                        noticePopTip.push('<a href="http://www.lagou.com/mycenter/invitation.html"  class="notice_tip" target="_blank"><strong>'+result.plusTipsCount+'</strong>条新职位邀请</a>');
+                    }
+
+                    noticePopTip.push('</div>');
+
+                    if(result.isShowPushNotice || result.isShowPlusTips){
+                        //弹出tip和红点
+                        noticeDotObj.removeClass("dn");
+                        headerNoticeObj.append(noticePopTip.join(''));
+                    }
+                    
+                    //全部已读
+                    $('#noticeTip a.closeNT').click(function(){
+                        //与后台交互，消息标识为已读
+                        clearNoticeTip(urls.clearPushNoticeOfC); 
+                        $('#noticeNo span').html('').hide();
+                    });
+                }
+            },
+            fail:function(data){
+                console.log('fail:' + data);
+            }
+        });
+        	}
+    
+    /*
+    * 全部清空notice
+    */
+    function clearNoticeTip(url){
+        PASSPORT.util.rpc({
+            params:{},
+            url:url,
+            succ:function(data){
+                $('#noticeTip').remove();
+                $("#noticeDot").addClass("dn");
+            },
+            fail:function(data){
+                 console.log('fail:' + data);
+            }
+        });
+    }
+</script>
+<div style="display: none;" id="cboxOverlay"></div><div style="display: none;" tabindex="-1" role="dialog" class="" id="colorbox"><div id="cboxWrapper"><div><div style="float: left;" id="cboxTopLeft"></div><div style="float: left;" id="cboxTopCenter"></div><div style="float: left;" id="cboxTopRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxMiddleLeft"></div><div style="float: left;" id="cboxContent"><div style="float: left;" id="cboxTitle"></div><div style="float: left;" id="cboxCurrent"></div><button id="cboxPrevious" type="button"></button><button id="cboxNext" type="button"></button><button id="cboxSlideshow"></button><div style="float: left;" id="cboxLoadingOverlay"></div><div style="float: left;" id="cboxLoadingGraphic"></div></div><div style="float: left;" id="cboxMiddleRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxBottomLeft"></div><div style="float: left;" id="cboxBottomCenter"></div><div style="float: left;" id="cboxBottomRight"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div>
+</block>

@@ -19,6 +19,12 @@
 		'AUTOLOAD_NAMESPACE'=>array('Addons'=>ONETHINK_ADDON_PATH),//扩展模块列表
 		'MULTI_MODULE'=>true,//模块名显示隐藏
 		'DEFAULT_MODULE'=>'Home',
+
+
+		//定义加载模块
+		define('BIND_MODULE','Home'),
+
+
 		'MODULE_DENY_LIST'=>array('Common','User','Admin','Install'),
 		'MODULE_ALLOW_LIST'=>'Home,Admin,Member',//创建分组
 		/*系统数据加密设置*/
@@ -38,9 +44,7 @@
 	    // if(version_compare(PHP_VERSION,'5.3.0','<'))  die('require PHP >5.3.0 !');
 	    /* 数据库配置 */
 	    'DB_TYPE'   => 'mysql', // 数据库类型
-	   // 'DB_HOST'   => '127.0.0.1', // 服务器地址59.188.8.43
-	   // 'DB_HOST'   => '192.168.0.18', // 服务器地址59.188.8.43
-	     'DB_HOST'   => '59.188.8.43',
+	   'DB_HOST'   => '127.0.0.1', //数据库地址
 	    'DB_NAME'   => 'lepin', // 数据库名
 	    'DB_USER'   => 'root', // 用户名
 	    'DB_PWD'    => 'root',  // 密码
@@ -52,7 +56,7 @@
 
 
 		 //开启布局
-		'LAYOUT_ON'=>true,
+		'LAYOUT_ON'=>false,
 		'LAYOUT_NAME'=>'Base/common',
 
 		//配置数据库

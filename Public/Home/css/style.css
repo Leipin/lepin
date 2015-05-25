@@ -3503,7 +3503,7 @@ ul.my_invitation li i{float:right;width:1px;height:24px;background: url(../image
 	width: 30px;
 	height: 30px;
 	margin:0 auto; 
-	background: url(../images/feedback.png) left center no-repeat;
+	background: url(../../images/feedback.png) left center no-repeat;
 	background-position: 0 0;
 }
 #feedback-icon .fb-icon:hover{
